@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S15",
+  "title": "时钟推进不自动确认",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A04"
+  ],
+  "calendar_id": "C_18",
+  "task": {
+    "task_id": "TASK.S15",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    },
+    {
+      "action": "clock_advance",
+      "details": {
+        "target_time": "2026-10-28T13:00:00Z"
+      }
+    },
+    {
+      "action": "user_confirm",
+      "details": {
+        "material_id": "M01",
+        "accepted_slot_id": "current_suggested_slot",
+        "accepted_risk_ids": [],
+        "version": "current_pending"
+      }
+    },
+    {
+      "action": "read_state",
+      "details": {}
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "pending_confirmation",
+        "save_status": "failed",
+        "draft_status": "pending_confirmation",
+        "draft_count": 1,
+        "occupies_slot": false,
+        "reason_codes": [
+          "INVALID_PUBLISH_TIME"
+        ],
+        "allowed_suggested_slot_ids": [
+          "S19",
+          "S20",
+          "S21"
+        ]
+      }
+    ],
+    "assertions": [
+      "推进到最后候选 S21 的精确时刻，所有原候选均不在未来。",
+      "旧 pending 不过期、不占位，确认失败、不自动发布；S19 只是代表建议。"
+    ]
+  }
+}

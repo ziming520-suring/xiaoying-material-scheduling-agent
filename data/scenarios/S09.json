@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S09",
+  "title": "技术重放与业务去重",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A05"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S09",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    },
+    {
+      "action": "repeat_saved_request",
+      "details": {
+        "instruction": "重启进程后重放原键原参。"
+      }
+    },
+    {
+      "action": "repeat_save_new_key",
+      "details": {
+        "instruction": "同建议、新 request_id，expected_draft_version 使用实际版本。"
+      }
+    },
+    {
+      "action": "read_state",
+      "details": {}
+    }
+  ],
+  "expected": {
+    "task_status": "completed",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "completed",
+        "save_status": "saved",
+        "draft_status": "confirmed",
+        "draft_count": 1,
+        "occupies_slot": true,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S18"
+        ]
+      }
+    ],
+    "assertions": [
+      "首次运行结束后绑定实际版本 v；后续原键重放和新键同内容保存始终只有一个草稿，版本保持 v、一个占位。",
+      "原键响应与首次响应完全相同；换键仍返回同一草稿。"
+    ]
+  }
+}

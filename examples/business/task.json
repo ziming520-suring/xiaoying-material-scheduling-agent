@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "request_id": "task",
+  "operation": "task.create",
+  "payload": {
+    "task_id": "DEMO",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  }
+}

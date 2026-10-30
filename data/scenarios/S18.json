@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S18",
+  "title": "读取工具持续失败",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A02"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S18",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "inject_fault",
+      "details": {
+        "point": "read_material",
+        "effect": "TOOL_UNAVAILABLE"
+      }
+    },
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "not_checked",
+        "item_status": "incomplete",
+        "save_status": "not_attempted",
+        "draft_status": null,
+        "draft_count": 0,
+        "occupies_slot": false,
+        "reason_codes": [
+          "TOOL_UNAVAILABLE"
+        ],
+        "allowed_suggested_slot_ids": []
+      }
+    ],
+    "assertions": [
+      "工具失败不等于资料无风险；不保存、不编造。",
+      "有限重试或停止；到上限必须 incomplete，stop_reason=step_limit。"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S14",
+  "title": "多个问题全部保留",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A02",
+    "A03"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S14",
+    "items": [
+      {
+        "material_id": "M07",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M07",
+        "review_status": "blocked",
+        "item_status": "blocked",
+        "save_status": "not_attempted",
+        "draft_status": null,
+        "draft_count": 0,
+        "occupies_slot": false,
+        "reason_codes": [
+          "REVIEW_BLOCKED"
+        ],
+        "allowed_suggested_slot_ids": []
+      }
+    ],
+    "assertions": [
+      "保留 R001 标题/授权缺失、R003 禁用文案、R004 人工复核三类问题。",
+      "主审核状态 blocked，不能被 needs_information 或 needs_confirmation 覆盖。"
+    ]
+  }
+}

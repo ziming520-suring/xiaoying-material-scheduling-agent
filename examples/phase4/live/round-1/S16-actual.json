@@ -1,0 +1,845 @@
+{
+  "scenario_id": "S16",
+  "execution_status": "completed",
+  "model_mode": "bailian_live",
+  "evidence_kind": "actual_local_tools_with_live_model",
+  "real_model_executed": true,
+  "input": {
+    "task_id": "TASK.S16",
+    "items": [
+      {
+        "material_id": "M05",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "calendar_id": "C_18",
+  "fault_injection": null,
+  "agent_runs": [
+    {
+      "task_id": "TASK.S16",
+      "task_status": "incomplete",
+      "items": [
+        {
+          "material_id": "M05",
+          "requested_time": "2026-10-28T10:00:00Z",
+          "review_status": "needs_confirmation",
+          "findings": [
+            {
+              "rule_id": "R004",
+              "severity": "confirm",
+              "field": "manual_review_required",
+              "reason": "测试规则：人工复核标记须由用户明确确认。",
+              "source_ids": [
+                "BASE.M05"
+              ],
+              "evidence": [
+                "true"
+              ]
+            }
+          ],
+          "suggested_slot": {
+            "slot_id": "S19",
+            "starts_at": "2026-10-28T11:00:00Z"
+          },
+          "pending_items": [
+            {
+              "kind": "time_change",
+              "field": "suggested_slot_id",
+              "risk_id": null,
+              "message": "请明确接受该版本的替代时段。"
+            },
+            {
+              "kind": "risk_confirmation",
+              "field": null,
+              "risk_id": "R004",
+              "message": "请明确接受提示风险 R004"
+            }
+          ],
+          "draft": {
+            "authorization_basis": null,
+            "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+            "confirmation_required": true,
+            "draft_id": "draft.c8e6072f66614dfa8aba83c935d47375",
+            "findings": [
+              {
+                "evidence": [
+                  "true"
+                ],
+                "field": "manual_review_required",
+                "reason": "测试规则：人工复核标记须由用户明确确认。",
+                "rule_id": "R004",
+                "severity": "confirm",
+                "source_ids": [
+                  "BASE.M05"
+                ]
+              }
+            ],
+            "material_id": "M05",
+            "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+            "occupies_slot": false,
+            "requested_time": "2026-10-28T10:00:00Z",
+            "required_risk_ids": [
+              "R004"
+            ],
+            "review_basis": {
+              "check_result": {
+                "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+                "findings": [
+                  {
+                    "evidence": [
+                      "true"
+                    ],
+                    "field": "manual_review_required",
+                    "reason": "测试规则：人工复核标记须由用户明确确认。",
+                    "rule_id": "R004",
+                    "severity": "confirm",
+                    "source_ids": [
+                      "BASE.M05"
+                    ]
+                  }
+                ],
+                "material_id": "M05",
+                "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+                "missing_fields": [],
+                "required_risk_ids": [
+                  "R004"
+                ],
+                "review_status": "needs_confirmation",
+                "rule_versions": [
+                  {
+                    "rule_id": "R001",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R002",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R003",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R004",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R005",
+                    "version": 1
+                  }
+                ]
+              },
+              "checked_at": "2026-10-28T09:00:00Z",
+              "primary": {
+                "caption": "测试素材：包含须由团队复核的品牌措辞。",
+                "manual_review_required": true,
+                "material_id": "M05",
+                "rights_status": "authorized",
+                "source_id": "BASE.M05",
+                "title": "人工复核样例",
+                "version": 1
+              },
+              "read_result": {
+                "conflicts": [],
+                "effective": {
+                  "caption": "测试素材：包含须由团队复核的品牌措辞。",
+                  "manual_review_required": true,
+                  "rights_status": "authorized",
+                  "title": "人工复核样例"
+                },
+                "material_id": "M05",
+                "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+                "missing_fields": [],
+                "provenance": {
+                  "caption": [
+                    "BASE.M05"
+                  ],
+                  "manual_review_required": [
+                    "BASE.M05"
+                  ],
+                  "rights_status": [
+                    "BASE.M05"
+                  ],
+                  "title": [
+                    "BASE.M05"
+                  ]
+                },
+                "sources": [
+                  {
+                    "source_id": "BASE.M05",
+                    "version": 1
+                  }
+                ],
+                "supplement_available": false,
+                "view": "primary"
+              },
+              "rules": [
+                {
+                  "fields": [
+                    "title",
+                    "caption",
+                    "rights_status"
+                  ],
+                  "kind": "required_fields",
+                  "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+                  "rule_id": "R001",
+                  "severity": "missing",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "denied_rights",
+                  "reason": "测试规则：明确未授权的素材禁止排期。",
+                  "rule_id": "R002",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "banned_terms",
+                  "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+                  "rule_id": "R003",
+                  "severity": "block",
+                  "terms": [
+                    "保证收益"
+                  ],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "manual_review",
+                  "reason": "测试规则：人工复核标记须由用户明确确认。",
+                  "rule_id": "R004",
+                  "severity": "confirm",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "source_conflict",
+                  "reason": "测试规则：资料来源矛盾时必须先核实。",
+                  "rule_id": "R005",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                }
+              ],
+              "supplements": []
+            },
+            "review_status": "needs_confirmation",
+            "status": "pending_confirmation",
+            "suggested_slot_id": "S19",
+            "suggested_time": "2026-10-28T11:00:00Z",
+            "task_id": "TASK.S16",
+            "version": 1
+          },
+          "save_status": "saved",
+          "item_status": "pending_confirmation",
+          "reason_codes": []
+        }
+      ],
+      "stop_reason": null
+    }
+  ],
+  "explicit_operations": [
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "payload": {
+          "initial_time": "2026-10-28T09:00:00Z"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "status": "succeeded",
+        "data": {
+          "current_time": "2026-10-28T09:00:00Z",
+          "clock_version": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "upgrade",
+        "operation": "schema.upgrade",
+        "payload": {
+          "target_storage_version": 2
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "upgrade",
+        "operation": "schema.upgrade",
+        "status": "succeeded",
+        "data": {
+          "previous_storage_version": 1,
+          "storage_schema_version": 2
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "load",
+        "operation": "fixture.load",
+        "payload": {
+          "dataset_id": "synthetic-campus-v1",
+          "manifest_sha256": "3e784ba3354fa16336ce478b98765028a0b5bcf32c108b40057a9534d9b4b0d4",
+          "calendar_id": "C_18"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "load",
+        "operation": "fixture.load",
+        "status": "succeeded",
+        "data": {
+          "dataset_id": "synthetic-campus-v1",
+          "calendar_id": "C_18",
+          "calendar_revision": 1,
+          "occupancy_version": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "task",
+        "operation": "task.create",
+        "payload": {
+          "task_id": "TASK.S16",
+          "items": [
+            {
+              "material_id": "M05",
+              "requested_time": "2026-10-28T18:00:00+08:00"
+            }
+          ]
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "task",
+        "operation": "task.create",
+        "status": "succeeded",
+        "data": {
+          "task": {
+            "items": [
+              {
+                "material_id": "M05",
+                "requested_time": "2026-10-28T10:00:00Z"
+              }
+            ],
+            "task_id": "TASK.S16"
+          }
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "missing-risk",
+        "operation": "draft.confirm",
+        "payload": {
+          "draft_id": "draft.c8e6072f66614dfa8aba83c935d47375",
+          "expected_draft_version": 1,
+          "accepted_slot_id": "S19",
+          "accepted_risk_ids": []
+        }
+      },
+      "channel": "user",
+      "response": {
+        "schema_version": 1,
+        "request_id": "missing-risk",
+        "operation": "draft.confirm",
+        "status": "failed",
+        "data": null,
+        "error": {
+          "code": "CONFIRMATION_MISMATCH",
+          "message": "Accept the exact proposed slot and all listed warning risks.",
+          "field": null,
+          "retryable": false
+        }
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "revise",
+        "operation": "draft.save",
+        "payload": {
+          "task_id": "TASK.S16",
+          "material_id": "M05",
+          "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+          "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+          "suggested_slot_id": "S20",
+          "expected_draft_version": 1
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "revise",
+        "operation": "draft.save",
+        "status": "succeeded",
+        "data": {
+          "draft": {
+            "draft_id": "draft.c8e6072f66614dfa8aba83c935d47375",
+            "task_id": "TASK.S16",
+            "material_id": "M05",
+            "version": 2,
+            "requested_time": "2026-10-28T10:00:00Z",
+            "suggested_slot_id": "S20",
+            "suggested_time": "2026-10-28T12:00:00Z",
+            "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+            "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+            "review_basis": {
+              "primary": {
+                "caption": "测试素材：包含须由团队复核的品牌措辞。",
+                "manual_review_required": true,
+                "material_id": "M05",
+                "rights_status": "authorized",
+                "source_id": "BASE.M05",
+                "title": "人工复核样例",
+                "version": 1
+              },
+              "supplements": [],
+              "rules": [
+                {
+                  "fields": [
+                    "title",
+                    "caption",
+                    "rights_status"
+                  ],
+                  "kind": "required_fields",
+                  "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+                  "rule_id": "R001",
+                  "severity": "missing",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "denied_rights",
+                  "reason": "测试规则：明确未授权的素材禁止排期。",
+                  "rule_id": "R002",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "banned_terms",
+                  "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+                  "rule_id": "R003",
+                  "severity": "block",
+                  "terms": [
+                    "保证收益"
+                  ],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "manual_review",
+                  "reason": "测试规则：人工复核标记须由用户明确确认。",
+                  "rule_id": "R004",
+                  "severity": "confirm",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "source_conflict",
+                  "reason": "测试规则：资料来源矛盾时必须先核实。",
+                  "rule_id": "R005",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                }
+              ],
+              "read_result": {
+                "material_id": "M05",
+                "view": "primary",
+                "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+                "effective": {
+                  "title": "人工复核样例",
+                  "caption": "测试素材：包含须由团队复核的品牌措辞。",
+                  "rights_status": "authorized",
+                  "manual_review_required": true
+                },
+                "sources": [
+                  {
+                    "source_id": "BASE.M05",
+                    "version": 1
+                  }
+                ],
+                "provenance": {
+                  "title": [
+                    "BASE.M05"
+                  ],
+                  "caption": [
+                    "BASE.M05"
+                  ],
+                  "rights_status": [
+                    "BASE.M05"
+                  ],
+                  "manual_review_required": [
+                    "BASE.M05"
+                  ]
+                },
+                "missing_fields": [],
+                "conflicts": [],
+                "supplement_available": false
+              },
+              "check_result": {
+                "material_id": "M05",
+                "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+                "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+                "rule_versions": [
+                  {
+                    "rule_id": "R001",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R002",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R003",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R004",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R005",
+                    "version": 1
+                  }
+                ],
+                "review_status": "needs_confirmation",
+                "findings": [
+                  {
+                    "rule_id": "R004",
+                    "severity": "confirm",
+                    "field": "manual_review_required",
+                    "reason": "测试规则：人工复核标记须由用户明确确认。",
+                    "source_ids": [
+                      "BASE.M05"
+                    ],
+                    "evidence": [
+                      "true"
+                    ]
+                  }
+                ],
+                "missing_fields": [],
+                "required_risk_ids": [
+                  "R004"
+                ]
+              },
+              "checked_at": "2026-10-28T09:00:00Z"
+            },
+            "review_status": "needs_confirmation",
+            "findings": [
+              {
+                "rule_id": "R004",
+                "severity": "confirm",
+                "field": "manual_review_required",
+                "reason": "测试规则：人工复核标记须由用户明确确认。",
+                "source_ids": [
+                  "BASE.M05"
+                ],
+                "evidence": [
+                  "true"
+                ]
+              }
+            ],
+            "confirmation_required": true,
+            "required_risk_ids": [
+              "R004"
+            ],
+            "status": "pending_confirmation",
+            "authorization_basis": null,
+            "occupies_slot": false
+          },
+          "save_status": "saved"
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "stale",
+        "operation": "draft.confirm",
+        "payload": {
+          "draft_id": "draft.c8e6072f66614dfa8aba83c935d47375",
+          "expected_draft_version": 1,
+          "accepted_slot_id": "S19",
+          "accepted_risk_ids": [
+            "R004"
+          ]
+        }
+      },
+      "channel": "user",
+      "response": {
+        "schema_version": 1,
+        "request_id": "stale",
+        "operation": "draft.confirm",
+        "status": "failed",
+        "data": null,
+        "error": {
+          "code": "DRAFT_VERSION_CONFLICT",
+          "message": "Confirm the current draft version explicitly.",
+          "field": null,
+          "retryable": false
+        }
+      }
+    }
+  ],
+  "final_drafts": [
+    {
+      "authorization_basis": null,
+      "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+      "confirmation_required": true,
+      "draft_id": "draft.c8e6072f66614dfa8aba83c935d47375",
+      "findings": [
+        {
+          "evidence": [
+            "true"
+          ],
+          "field": "manual_review_required",
+          "reason": "测试规则：人工复核标记须由用户明确确认。",
+          "rule_id": "R004",
+          "severity": "confirm",
+          "source_ids": [
+            "BASE.M05"
+          ]
+        }
+      ],
+      "material_id": "M05",
+      "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+      "occupies_slot": false,
+      "requested_time": "2026-10-28T10:00:00Z",
+      "required_risk_ids": [
+        "R004"
+      ],
+      "review_basis": {
+        "check_result": {
+          "check_ref": "check.a309a3d4212680aaee0941760e9d449023e2e8b0f1f8ac871a9cd817683104aa",
+          "findings": [
+            {
+              "evidence": [
+                "true"
+              ],
+              "field": "manual_review_required",
+              "reason": "测试规则：人工复核标记须由用户明确确认。",
+              "rule_id": "R004",
+              "severity": "confirm",
+              "source_ids": [
+                "BASE.M05"
+              ]
+            }
+          ],
+          "material_id": "M05",
+          "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+          "missing_fields": [],
+          "required_risk_ids": [
+            "R004"
+          ],
+          "review_status": "needs_confirmation",
+          "rule_versions": [
+            {
+              "rule_id": "R001",
+              "version": 1
+            },
+            {
+              "rule_id": "R002",
+              "version": 1
+            },
+            {
+              "rule_id": "R003",
+              "version": 1
+            },
+            {
+              "rule_id": "R004",
+              "version": 1
+            },
+            {
+              "rule_id": "R005",
+              "version": 1
+            }
+          ]
+        },
+        "checked_at": "2026-10-28T09:00:00Z",
+        "primary": {
+          "caption": "测试素材：包含须由团队复核的品牌措辞。",
+          "manual_review_required": true,
+          "material_id": "M05",
+          "rights_status": "authorized",
+          "source_id": "BASE.M05",
+          "title": "人工复核样例",
+          "version": 1
+        },
+        "read_result": {
+          "conflicts": [],
+          "effective": {
+            "caption": "测试素材：包含须由团队复核的品牌措辞。",
+            "manual_review_required": true,
+            "rights_status": "authorized",
+            "title": "人工复核样例"
+          },
+          "material_id": "M05",
+          "material_ref": "mat.9c32e750243f9eadd1c0e76abbe1cc97e66d55ee565bdb507970385bd2b88215",
+          "missing_fields": [],
+          "provenance": {
+            "caption": [
+              "BASE.M05"
+            ],
+            "manual_review_required": [
+              "BASE.M05"
+            ],
+            "rights_status": [
+              "BASE.M05"
+            ],
+            "title": [
+              "BASE.M05"
+            ]
+          },
+          "sources": [
+            {
+              "source_id": "BASE.M05",
+              "version": 1
+            }
+          ],
+          "supplement_available": false,
+          "view": "primary"
+        },
+        "rules": [
+          {
+            "fields": [
+              "title",
+              "caption",
+              "rights_status"
+            ],
+            "kind": "required_fields",
+            "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+            "rule_id": "R001",
+            "severity": "missing",
+            "terms": [],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "denied_rights",
+            "reason": "测试规则：明确未授权的素材禁止排期。",
+            "rule_id": "R002",
+            "severity": "block",
+            "terms": [],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "banned_terms",
+            "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+            "rule_id": "R003",
+            "severity": "block",
+            "terms": [
+              "保证收益"
+            ],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "manual_review",
+            "reason": "测试规则：人工复核标记须由用户明确确认。",
+            "rule_id": "R004",
+            "severity": "confirm",
+            "terms": [],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "source_conflict",
+            "reason": "测试规则：资料来源矛盾时必须先核实。",
+            "rule_id": "R005",
+            "severity": "block",
+            "terms": [],
+            "version": 1
+          }
+        ],
+        "supplements": []
+      },
+      "review_status": "needs_confirmation",
+      "status": "pending_confirmation",
+      "suggested_slot_id": "S20",
+      "suggested_time": "2026-10-28T12:00:00Z",
+      "task_id": "TASK.S16",
+      "version": 2
+    }
+  ],
+  "final_clock": {
+    "schema_version": 1,
+    "request_id": null,
+    "operation": "clock.read",
+    "status": "succeeded",
+    "data": {
+      "current_time": "2026-10-28T09:00:00Z",
+      "clock_version": 1
+    },
+    "error": null
+  },
+  "verified_assertions": [
+    "Missing risk consent and stale version rejected; controlled revision increments once.",
+    "Final per-material draft count, status, allowed slot and occupancy match scenario projection."
+  ],
+  "trace_files": [
+    "S16-run-1.jsonl"
+  ],
+  "note": "Operations after agent_runs are separate real user/test calls; do not mistake an earlier run result for the final state.",
+  "phase4_verdict": {
+    "scenario_id": "S16",
+    "round": 1,
+    "passed": true,
+    "checks": {
+      "contract_assertions": true,
+      "initial_status_matches": true,
+      "no_model_errors": true
+    },
+    "real_model_executed": true,
+    "model_mode": "bailian_live",
+    "error_type": null,
+    "initial_statuses": [
+      "pending_confirmation"
+    ],
+    "model_errors": [],
+    "elapsed_seconds": 13.516,
+    "actual_file": "round-1/S16-actual.json",
+    "traces": [
+      {
+        "file": "S16-run-1.jsonl",
+        "actions": [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ]
+      }
+    ]
+  }
+}

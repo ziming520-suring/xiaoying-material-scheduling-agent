@@ -1,0 +1,499 @@
+{
+  "model": "qwen-plus",
+  "provider": "Alibaba Cloud Bailian Beijing",
+  "note": "Adaptive development attempts, not an unbiased benchmark success rate. Selected runs span documented iterations; inspect all failures.",
+  "all_attempts": [
+    {
+      "scenario_id": "S10",
+      "passed": false,
+      "model_errors": [],
+      "file": "examples/bailian-failure-final/S10-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S01",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-final/S01-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-final/S02-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-final/S06-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-live/S02-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "read_material",
+          "read_material",
+          "read_material",
+          "read_material",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "passed": false,
+      "model_errors": [],
+      "file": "examples/bailian-live/S03-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "read_material",
+          "read_material",
+          "read_material",
+          "check_rules",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-live/S06-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "passed": false,
+      "model_errors": [
+        {
+          "code": "MODEL_PROTOCOL_ERROR",
+          "diagnostic": "missing_reason",
+          "event": "model_error",
+          "step": 4
+        }
+      ],
+      "file": "examples/bailian-protocol-diagnostic/S02-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "read_material",
+          "check_rules"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S01",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-smoke/S01-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "passed": false,
+      "model_errors": [
+        {
+          "code": "MODEL_PROTOCOL_ERROR",
+          "event": "model_error",
+          "step": 4
+        }
+      ],
+      "file": "examples/bailian-supplement-recheck/S02-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "read_material",
+          "check_rules"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "passed": false,
+      "model_errors": [],
+      "file": "examples/bailian-v2/S03-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S01",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S01-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "passed": false,
+      "model_errors": [
+        {
+          "code": "MODEL_PROTOCOL_ERROR",
+          "event": "model_error",
+          "step": 4
+        }
+      ],
+      "file": "examples/bailian-v3/S02-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "read_material",
+          "check_rules"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S03-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S04",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S04-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S06-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S09",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S09-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S10",
+      "passed": true,
+      "model_errors": [
+        {
+          "code": "MODEL_PROTOCOL_ERROR",
+          "event": "model_error",
+          "step": 5
+        }
+      ],
+      "file": "examples/bailian-v3/S10-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S11-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ],
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    }
+  ],
+  "selected_coverage": [
+    {
+      "scenario_id": "S01",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-final/S01-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-final/S02-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S03-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S04",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S04-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-final/S06-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S09",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S09-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S10",
+      "passed": false,
+      "model_errors": [],
+      "file": "examples/bailian-failure-final/S10-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "save_draft",
+          "finish"
+        ]
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "passed": true,
+      "model_errors": [],
+      "file": "examples/bailian-v3/S11-actual.json",
+      "action_sequences": [
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft",
+          "finish"
+        ],
+        [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      ]
+    }
+  ],
+  "selected_all_passed": false,
+  "save_failure_followup_validation": {
+    "passed": true,
+    "checks": [
+      {
+        "check": "Failure is explicit and initial item has no saved draft",
+        "passed": true
+      },
+      {
+        "check": "Harness repeats exact original request and receives identical success",
+        "passed": true
+      },
+      {
+        "check": "Exactly one draft equals acknowledged recovery result",
+        "passed": true
+      },
+      {
+        "check": "Original requirement is preserved",
+        "passed": true
+      },
+      {
+        "check": "Recovered proposal occupies only if original time and no unaccepted risk",
+        "passed": true
+      }
+    ],
+    "notice": "Offline follow-up validation of preserved actual records, not a new model run or rewritten original verdict.",
+    "source_sha256": "794b267d201a36642f3fe74f5b455f215be47debee5d66141c7afcb5fef79fd3"
+  },
+  "budget": {
+    "calls": 96,
+    "usage_known_calls": 96,
+    "reserved_yuan": "9.60",
+    "limit_yuan": "10.00",
+    "prompt_tokens": 183948,
+    "completion_tokens": 7867,
+    "estimated_yuan": "0.1628924",
+    "notice": "Estimate at documented rates, not provider bill; reservations include failures."
+  },
+  "tests": {
+    "count": 97,
+    "failures": 0,
+    "errors": 0,
+    "log": "test-results.txt"
+  },
+  "final_source_sha256": {
+    "src/schedule_agent/__init__.py": "2a9af73f7f89d271acad72a7ea8b47fa3415526bcf9df97e630a69a449b0ef83",
+    "src/schedule_agent/__main__.py": "e775eed6a3c91ec66e62c5d9ec0134b03e60fe490da933ad37ae03a287eb78aa",
+    "src/schedule_agent/agent.py": "e13d79352d90da29d0f360febf790fa02a6ecac63f1df9e4b9735c80e29cae83",
+    "src/schedule_agent/bailian.py": "afa91d2d0c2c8d949bd0baf930f6d9d162febd4532017305f3a79d8c752fa108",
+    "src/schedule_agent/business.py": "65a2c94550dc628a13540e16670cf9d17c3a6fdf93d792e16f86195c58cf8244",
+    "src/schedule_agent/business_schema.py": "d3b2beb3dd63448eba1e657a6d7e64990187976e55ffc5c13c6371a572ed52d0",
+    "src/schedule_agent/business_validation.py": "91a8774dbc81270d2fa1371cc13f6f5dfd2d44bd3b04620eb54bed6c9ec41bd9",
+    "src/schedule_agent/contracts.py": "b31a2c9bd58b8890899c83d620f440f9e9a6c9991952bc506adea590f67664c6",
+    "src/schedule_agent/draft_tools.py": "f7c4bae5b5751a81d7cd27196644952798cdbe13b67edb27b0fd8fcf6f36f660",
+    "src/schedule_agent/material_tools.py": "c13dc69ccf90ca542a22183c5031335a33a48353debd1d3ff5bbbaf8cf2a06eb",
+    "src/schedule_agent/model.py": "8d46b265fd0fb8f4037655778a7c781d9b17fdb80ff2db70767e861221218343",
+    "src/schedule_agent/runtime.py": "3006bccb00fd6a2472d2624cdf6bb0f7c58d9c5e2853ed3ef8e9fc95385b1417",
+    "src/schedule_agent/storage.py": "45577a0aa078cb5c69de2e1d098a725bcfca9057901bf8115fb5b6c6536eb953"
+  }
+}

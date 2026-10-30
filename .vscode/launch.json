@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "素材排期：一键演示（离线，不收费）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_demo.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": [],
+      "justMyCode": true
+    },
+    {
+      "name": "素材排期：真实百炼（消耗模型预算）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_demo.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": ["--model", "bailian"],
+      "justMyCode": true
+    }
+  ]
+}

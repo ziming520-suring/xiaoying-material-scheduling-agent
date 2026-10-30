@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "request_id": "load",
+  "operation": "fixture.load",
+  "payload": {
+    "dataset_id": "synthetic-campus-v1",
+    "manifest_sha256": "3e784ba3354fa16336ce478b98765028a0b5bcf32c108b40057a9534d9b4b0d4",
+    "calendar_id": "C_18"
+  }
+}

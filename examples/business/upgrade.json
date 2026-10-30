@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "request_id": "upgrade",
+  "operation": "schema.upgrade",
+  "payload": {
+    "target_storage_version": 2
+  }
+}

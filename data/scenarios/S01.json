@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S01",
+  "title": "正常排期",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A01"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S01",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "completed",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "completed",
+        "save_status": "saved",
+        "draft_status": "confirmed",
+        "draft_count": 1,
+        "occupies_slot": true,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S18"
+        ]
+      }
+    ],
+    "assertions": [
+      "一份 confirmed 草稿占 S18，依据 original_request。",
+      "保留原要求；不得声称已发布。"
+    ]
+  }
+}

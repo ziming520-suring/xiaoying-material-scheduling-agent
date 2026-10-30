@@ -1,0 +1,13 @@
+test_engine_exists (test_agent.AgentTests.test_engine_exists) ... ok
+test_missing_material_and_step_limit_cannot_claim_success (test_agent.AgentTests.test_missing_material_and_step_limit_cannot_claim_success) ... ok
+test_mock_normal_and_conflict_are_observation_dependent (test_agent.AgentTests.test_mock_normal_and_conflict_are_observation_dependent) ... ok
+test_model_cannot_confirm_or_save_another_task (test_agent.AgentTests.test_model_cannot_confirm_or_save_another_task) ... ok
+test_read_failure_does_not_turn_into_passed_review (test_agent.AgentTests.test_read_failure_does_not_turn_into_passed_review) ... ok
+test_supplement_observation_causes_second_read_and_rule_check (test_agent.AgentTests.test_supplement_observation_causes_second_read_and_rule_check) ... ok
+test_trace_cannot_overwrite_previous_evidence (test_agent.AgentTests.test_trace_cannot_overwrite_previous_evidence) ... ok
+test_unknown_stops_and_preserves_original_request (test_agent.AgentTests.test_unknown_stops_and_preserves_original_request) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.148s
+
+OK

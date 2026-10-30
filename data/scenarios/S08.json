@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S08",
+  "title": "无可用时段",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A04"
+  ],
+  "calendar_id": "C_FULL",
+  "task": {
+    "task_id": "TASK.S08",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "incomplete",
+        "save_status": "not_attempted",
+        "draft_status": null,
+        "draft_count": 0,
+        "occupies_slot": false,
+        "reason_codes": [
+          "NO_AVAILABLE_SLOT"
+        ],
+        "allowed_suggested_slot_ids": []
+      }
+    ],
+    "assertions": [
+      "alternatives 为空，不虚构时段；不创建草稿。"
+    ]
+  }
+}

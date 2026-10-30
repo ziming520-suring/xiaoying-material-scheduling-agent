@@ -1,0 +1,1721 @@
+{
+  "started_at": "2026-10-29T09:30:43.676495+00:00",
+  "updated_at": "2026-10-29T09:30:53.006254+00:00",
+  "model_mode": "offline_mock",
+  "model": "OfflineMock",
+  "requested_cases": 54,
+  "executed_cases": 54,
+  "passed": 54,
+  "failed": 0,
+  "stop_reason": "completed",
+  "results": [
+    {
+      "scenario_id": "S01",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-1/S01-actual.json",
+      "traces": [
+        {
+          "file": "S01-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-1/S02-actual.json",
+      "traces": [
+        {
+          "file": "S02-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "needs_information"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.125,
+      "actual_file": "round-1/S03-actual.json",
+      "traces": [
+        {
+          "file": "S03-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S04",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.14,
+      "actual_file": "round-1/S04-actual.json",
+      "traces": [
+        {
+          "file": "S04-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S05",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-1/S05-actual.json",
+      "traces": [
+        {
+          "file": "S05-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.156,
+      "actual_file": "round-1/S06-actual.json",
+      "traces": [
+        {
+          "file": "S06-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S07",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-1/S07-actual.json",
+      "traces": [
+        {
+          "file": "S07-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S08",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "incomplete"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.125,
+      "actual_file": "round-1/S08-actual.json",
+      "traces": [
+        {
+          "file": "S08-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S09",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.141,
+      "actual_file": "round-1/S09-actual.json",
+      "traces": [
+        {
+          "file": "S09-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S10",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-1/S10-actual.json",
+      "traces": [
+        {
+          "file": "S10-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.234,
+      "actual_file": "round-1/S11-actual.json",
+      "traces": [
+        {
+          "file": "S11-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        },
+        {
+          "file": "S11-run-2.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S12",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed",
+        "needs_information",
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.187,
+      "actual_file": "round-1/S12-actual.json",
+      "traces": [
+        {
+          "file": "S12-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "read_material",
+            "check_rules",
+            "finish",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S13",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.125,
+      "actual_file": "round-1/S13-actual.json",
+      "traces": [
+        {
+          "file": "S13-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S14",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.125,
+      "actual_file": "round-1/S14-actual.json",
+      "traces": [
+        {
+          "file": "S14-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S15",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.157,
+      "actual_file": "round-1/S15-actual.json",
+      "traces": [
+        {
+          "file": "S15-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S16",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-1/S16-actual.json",
+      "traces": [
+        {
+          "file": "S16-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S17",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "unknown"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.157,
+      "actual_file": "round-1/S17-actual.json",
+      "traces": [
+        {
+          "file": "S17-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S18",
+      "round": 1,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "incomplete"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-1/S18-actual.json",
+      "traces": [
+        {
+          "file": "S18-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S01",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.157,
+      "actual_file": "round-2/S01-actual.json",
+      "traces": [
+        {
+          "file": "S01-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-2/S02-actual.json",
+      "traces": [
+        {
+          "file": "S02-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "needs_information"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.094,
+      "actual_file": "round-2/S03-actual.json",
+      "traces": [
+        {
+          "file": "S03-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S04",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.094,
+      "actual_file": "round-2/S04-actual.json",
+      "traces": [
+        {
+          "file": "S04-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S05",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.171,
+      "actual_file": "round-2/S05-actual.json",
+      "traces": [
+        {
+          "file": "S05-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.156,
+      "actual_file": "round-2/S06-actual.json",
+      "traces": [
+        {
+          "file": "S06-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S07",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.203,
+      "actual_file": "round-2/S07-actual.json",
+      "traces": [
+        {
+          "file": "S07-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S08",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "incomplete"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.11,
+      "actual_file": "round-2/S08-actual.json",
+      "traces": [
+        {
+          "file": "S08-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S09",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-2/S09-actual.json",
+      "traces": [
+        {
+          "file": "S09-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S10",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-2/S10-actual.json",
+      "traces": [
+        {
+          "file": "S10-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.25,
+      "actual_file": "round-2/S11-actual.json",
+      "traces": [
+        {
+          "file": "S11-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        },
+        {
+          "file": "S11-run-2.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S12",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed",
+        "needs_information",
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.219,
+      "actual_file": "round-2/S12-actual.json",
+      "traces": [
+        {
+          "file": "S12-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "read_material",
+            "check_rules",
+            "finish",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S13",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-2/S13-actual.json",
+      "traces": [
+        {
+          "file": "S13-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S14",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.062,
+      "actual_file": "round-2/S14-actual.json",
+      "traces": [
+        {
+          "file": "S14-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S15",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-2/S15-actual.json",
+      "traces": [
+        {
+          "file": "S15-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S16",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.235,
+      "actual_file": "round-2/S16-actual.json",
+      "traces": [
+        {
+          "file": "S16-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S17",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "unknown"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-2/S17-actual.json",
+      "traces": [
+        {
+          "file": "S17-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S18",
+      "round": 2,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "incomplete"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.062,
+      "actual_file": "round-2/S18-actual.json",
+      "traces": [
+        {
+          "file": "S18-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S01",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.125,
+      "actual_file": "round-3/S01-actual.json",
+      "traces": [
+        {
+          "file": "S01-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.156,
+      "actual_file": "round-3/S02-actual.json",
+      "traces": [
+        {
+          "file": "S02-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "needs_information"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-3/S03-actual.json",
+      "traces": [
+        {
+          "file": "S03-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S04",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-3/S04-actual.json",
+      "traces": [
+        {
+          "file": "S04-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S05",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.203,
+      "actual_file": "round-3/S05-actual.json",
+      "traces": [
+        {
+          "file": "S05-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.141,
+      "actual_file": "round-3/S06-actual.json",
+      "traces": [
+        {
+          "file": "S06-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S07",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.187,
+      "actual_file": "round-3/S07-actual.json",
+      "traces": [
+        {
+          "file": "S07-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S08",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "incomplete"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-3/S08-actual.json",
+      "traces": [
+        {
+          "file": "S08-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S09",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-3/S09-actual.json",
+      "traces": [
+        {
+          "file": "S09-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S10",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.203,
+      "actual_file": "round-3/S10-actual.json",
+      "traces": [
+        {
+          "file": "S10-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.234,
+      "actual_file": "round-3/S11-actual.json",
+      "traces": [
+        {
+          "file": "S11-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        },
+        {
+          "file": "S11-run-2.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S12",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "completed",
+        "needs_information",
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.187,
+      "actual_file": "round-3/S12-actual.json",
+      "traces": [
+        {
+          "file": "S12-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "read_material",
+            "check_rules",
+            "finish",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S13",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-3/S13-actual.json",
+      "traces": [
+        {
+          "file": "S13-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S14",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "blocked"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.109,
+      "actual_file": "round-3/S14-actual.json",
+      "traces": [
+        {
+          "file": "S14-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S15",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-3/S15-actual.json",
+      "traces": [
+        {
+          "file": "S15-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S16",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "pending_confirmation"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.172,
+      "actual_file": "round-3/S16-actual.json",
+      "traces": [
+        {
+          "file": "S16-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S17",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "unknown"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.125,
+      "actual_file": "round-3/S17-actual.json",
+      "traces": [
+        {
+          "file": "S17-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S18",
+      "round": 3,
+      "passed": true,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": true,
+        "no_model_errors": true
+      },
+      "real_model_executed": false,
+      "model_mode": "offline_mock",
+      "error_type": null,
+      "initial_statuses": [
+        "incomplete"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 0.094,
+      "actual_file": "round-3/S18-actual.json",
+      "traces": [
+        {
+          "file": "S18-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "finish"
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "src/schedule_agent/__init__.py": "2a9af73f7f89d271acad72a7ea8b47fa3415526bcf9df97e630a69a449b0ef83",
+    "src/schedule_agent/__main__.py": "e775eed6a3c91ec66e62c5d9ec0134b03e60fe490da933ad37ae03a287eb78aa",
+    "src/schedule_agent/agent.py": "e13d79352d90da29d0f360febf790fa02a6ecac63f1df9e4b9735c80e29cae83",
+    "src/schedule_agent/bailian.py": "8eefe28ecd594fa02da17690be5b1d13e63827cec3e77fd9d17cd7e83231b062",
+    "src/schedule_agent/budget.py": "5a08dd925fda35605a8e60f75bdaef52fb709cd48bd98b98e83061b447587374",
+    "src/schedule_agent/business.py": "65a2c94550dc628a13540e16670cf9d17c3a6fdf93d792e16f86195c58cf8244",
+    "src/schedule_agent/business_schema.py": "d3b2beb3dd63448eba1e657a6d7e64990187976e55ffc5c13c6371a572ed52d0",
+    "src/schedule_agent/business_validation.py": "91a8774dbc81270d2fa1371cc13f6f5dfd2d44bd3b04620eb54bed6c9ec41bd9",
+    "src/schedule_agent/contracts.py": "b31a2c9bd58b8890899c83d620f440f9e9a6c9991952bc506adea590f67664c6",
+    "src/schedule_agent/draft_tools.py": "f7c4bae5b5751a81d7cd27196644952798cdbe13b67edb27b0fd8fcf6f36f660",
+    "src/schedule_agent/material_tools.py": "c13dc69ccf90ca542a22183c5031335a33a48353debd1d3ff5bbbaf8cf2a06eb",
+    "src/schedule_agent/model.py": "8d46b265fd0fb8f4037655778a7c781d9b17fdb80ff2db70767e861221218343",
+    "src/schedule_agent/runtime.py": "3006bccb00fd6a2472d2624cdf6bb0f7c58d9c5e2853ed3ef8e9fc95385b1417",
+    "src/schedule_agent/storage.py": "45577a0aa078cb5c69de2e1d098a725bcfca9057901bf8115fb5b6c6536eb953",
+    "tests/phase4_evaluate.py": "549b0618219bf096c6156df378b8fc8520d7e64afbb272826a075ad2987d5886",
+    "tests/record_business_evidence.py": "a91979468cdf04963cc1838892573299619e6320f6098f28976aba6945550d4b"
+  },
+  "source_unchanged": true,
+  "budget_before": null,
+  "budget_after": null,
+  "note": "Synthetic local business tools; confirmation/calendar/recovery actions belong to the test harness, not the model. No real publishing."
+}

@@ -1,0 +1,3 @@
+# Runtime, HTTPS model adapter and tests use Python 3.12 standard library only.
+# No third-party packages. Bailian uses the OpenAI-compatible HTTP protocol,
+# not the OpenAI Python SDK. Offline mode needs no credentials or network.

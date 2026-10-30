@@ -1,0 +1,53 @@
+test_invalid_business_payload_leaves_database_unchanged (test_business.BusinessTests.test_invalid_business_payload_leaves_database_unchanged) ... ok
+test_load_replay_and_reject_second_load (test_business.BusinessTests.test_load_replay_and_reject_second_load) ... ok
+test_risk_precedence_and_conflicts_in_both_views (test_business.BusinessTests.test_risk_precedence_and_conflicts_in_both_views) ... ok
+test_slot_query_and_hard_time_task_identity (test_business.BusinessTests.test_slot_query_and_hard_time_task_identity) ... ok
+test_supplement_recheck_and_unresolvable_missing (test_business.BusinessTests.test_supplement_recheck_and_unresolvable_missing) ... ok
+test_upgrade_retains_clock_and_original_replay (test_business.BusinessTests.test_upgrade_retains_clock_and_original_replay) ... ok
+test_cli_conflict_and_reversal_are_exit_two (test_cli.CliTests.test_cli_conflict_and_reversal_are_exit_two) ... ok
+test_cli_init_advance_replay_and_read (test_cli.CliTests.test_cli_init_advance_replay_and_read) ... ok
+test_cli_invalid_json_returns_exit_two_and_no_database (test_cli.CliTests.test_cli_invalid_json_returns_exit_two_and_no_database) ... ok
+test_cli_invalid_utf8_returns_error (test_cli.CliTests.test_cli_invalid_utf8_returns_error) ... ok
+test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) ... ok
+test_cli_query_does_not_initialize_or_change_database (test_cli.CliTests.test_cli_query_does_not_initialize_or_change_database) ... ok
+test_cli_storage_failure_exit_three (test_cli.CliTests.test_cli_storage_failure_exit_three) ... ok
+test_review_corrupt_nan_replay_remains_a_json_error (test_cli.CliTests.test_review_corrupt_nan_replay_remains_a_json_error) ... ok
+test_B01_invalid_request_cannot_create_database (test_runtime.RuntimeTests.test_B01_invalid_request_cannot_create_database) ... ok
+test_B01_invalid_request_does_not_modify_existing_database (test_runtime.RuntimeTests.test_B01_invalid_request_does_not_modify_existing_database) ... ok
+test_B02_initialization_replays_but_new_key_cannot_reset_clock (test_runtime.RuntimeTests.test_B02_initialization_replays_but_new_key_cannot_reset_clock) ... ok
+test_B03_same_key_changed_parameters_conflicts (test_runtime.RuntimeTests.test_B03_same_key_changed_parameters_conflicts) ... ok
+test_B04_timezone_equivalent_replay_returns_original (test_runtime.RuntimeTests.test_B04_timezone_equivalent_replay_returns_original) ... ok
+test_B05_read_and_advance_do_not_initialize (test_runtime.RuntimeTests.test_B05_read_and_advance_do_not_initialize) ... ok
+test_B06_equal_time_does_not_invoke_settlement_or_increment_version (test_runtime.RuntimeTests.test_B06_equal_time_does_not_invoke_settlement_or_increment_version) ... ok
+test_B07_old_success_replays_without_reversing_later_clock (test_runtime.RuntimeTests.test_B07_old_success_replays_without_reversing_later_clock) ... ok
+test_B08_time_reversal_is_rejected_without_state_change (test_runtime.RuntimeTests.test_B08_time_reversal_is_rejected_without_state_change) ... ok
+test_B09_failure_writing_replay_rolls_back_clock_and_allows_retry (test_runtime.RuntimeTests.test_B09_failure_writing_replay_rolls_back_clock_and_allows_retry) ... ok
+test_B10_busy_returns_error_without_partial_write (test_runtime.RuntimeTests.test_B10_busy_returns_error_without_partial_write) ... ok
+test_B10_concurrent_changed_parameters_have_one_winner (test_runtime.RuntimeTests.test_B10_concurrent_changed_parameters_have_one_winner) ... ok
+test_B10_two_processes_same_key_execute_once (test_runtime.RuntimeTests.test_B10_two_processes_same_key_execute_once) ... ok
+test_B11_replay_survives_new_process (test_runtime.RuntimeTests.test_B11_replay_survives_new_process) ... ok
+test_B12_test_due_boundary_and_no_duplicate_settlement (test_runtime.RuntimeTests.test_B12_test_due_boundary_and_no_duplicate_settlement) ... ok
+test_B13_partial_settlement_rolls_back_everything (test_runtime.RuntimeTests.test_B13_partial_settlement_rolls_back_everything) ... ok
+test_B14_committed_then_response_error_is_recovered (test_runtime.RuntimeTests.test_B14_committed_then_response_error_is_recovered) ... ok
+test_B15_commit_outcome_unknown_then_retry_recovers (test_runtime.RuntimeTests.test_B15_commit_outcome_unknown_then_retry_recovers) ... ok
+test_B16_production_advance_has_no_due_business_objects (test_runtime.RuntimeTests.test_B16_production_advance_has_no_due_business_objects) ... ok
+test_corrupt_and_unrelated_databases_are_not_overwritten (test_runtime.RuntimeTests.test_corrupt_and_unrelated_databases_are_not_overwritten) ... ok
+test_incompatible_or_incomplete_schema_is_not_repaired (test_runtime.RuntimeTests.test_incompatible_or_incomplete_schema_is_not_repaired) ... ok
+test_missing_parent_and_readonly_query_never_create_directories (test_runtime.RuntimeTests.test_missing_parent_and_readonly_query_never_create_directories) ... ok
+test_review_corrupt_initialization_result_is_rejected (test_runtime.RuntimeTests.test_review_corrupt_initialization_result_is_rejected) ... ok
+test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) ... ok
+test_review_missing_replay_key_constraint_rejected_before_mutation (test_runtime.RuntimeTests.test_review_missing_replay_key_constraint_rejected_before_mutation) ... ok
+test_review_reordered_replay_schema_rejected_before_mutation (test_runtime.RuntimeTests.test_review_reordered_replay_schema_rejected_before_mutation) ... ok
+test_equivalent_time_and_key_order_have_same_identity (test_validation.ValidationTests.test_equivalent_time_and_key_order_have_same_identity) ... ok
+test_identity_excludes_key_but_includes_parameters_and_operation (test_validation.ValidationTests.test_identity_excludes_key_but_includes_parameters_and_operation) ... ok
+test_invalid_envelopes (test_validation.ValidationTests.test_invalid_envelopes) ... ok
+test_invalid_times (test_validation.ValidationTests.test_invalid_times) ... ok
+test_nan_infinity_and_deep_json_return_validation_error (test_validation.ValidationTests.test_nan_infinity_and_deep_json_return_validation_error) ... ok
+test_rejects_duplicate_keys_at_any_depth (test_validation.ValidationTests.test_rejects_duplicate_keys_at_any_depth) ... ok
+test_time_extremes_are_zero_padded_and_normalized (test_validation.ValidationTests.test_time_extremes_are_zero_padded_and_normalized) ... ok
+test_unknown_version_and_operation (test_validation.ValidationTests.test_unknown_version_and_operation) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 8.834s
+
+OK

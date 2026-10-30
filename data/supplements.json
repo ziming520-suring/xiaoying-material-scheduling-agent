@@ -1,0 +1,18 @@
+[
+  {
+    "source_id": "SUP.M02",
+    "material_id": "M02",
+    "version": 1,
+    "fields": {
+      "rights_status": "authorized"
+    }
+  },
+  {
+    "source_id": "SUP.M06",
+    "material_id": "M06",
+    "version": 1,
+    "fields": {
+      "rights_status": "denied"
+    }
+  }
+]

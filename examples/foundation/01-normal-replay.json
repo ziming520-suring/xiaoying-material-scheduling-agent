@@ -1,0 +1,149 @@
+{
+  "mode": "real CLI / local SQLite",
+  "steps": [
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "payload": {
+          "initial_time": "2026-10-28T09:00:00Z"
+        }
+      },
+      "output": {
+        "data": {
+          "clock_version": 1,
+          "current_time": "2026-10-28T09:00:00Z"
+        },
+        "error": null,
+        "operation": "system.initialize",
+        "request_id": "init",
+        "schema_version": 1,
+        "status": "succeeded"
+      },
+      "exit_code": 0,
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "system.initialize",
+          "request_id": "init"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "system.initialize",
+          "request_id": "init"
+        },
+        {
+          "event": "committed",
+          "operation": "system.initialize",
+          "request_id": "init",
+          "result": {
+            "clock_version": 1,
+            "current_time": "2026-10-28T09:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "advance-1",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T10:00:00Z"
+        }
+      },
+      "output": {
+        "data": {
+          "clock_version": 2,
+          "current_time": "2026-10-28T10:00:00Z",
+          "previous_time": "2026-10-28T09:00:00Z",
+          "settled_count": 0
+        },
+        "error": null,
+        "operation": "clock.advance",
+        "request_id": "advance-1",
+        "schema_version": 1,
+        "status": "succeeded"
+      },
+      "exit_code": 0,
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        },
+        {
+          "event": "committed",
+          "operation": "clock.advance",
+          "request_id": "advance-1",
+          "result": {
+            "clock_version": 2,
+            "current_time": "2026-10-28T10:00:00Z",
+            "previous_time": "2026-10-28T09:00:00Z",
+            "settled_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "advance-1",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T10:00:00Z"
+        }
+      },
+      "output": {
+        "data": {
+          "clock_version": 2,
+          "current_time": "2026-10-28T10:00:00Z",
+          "previous_time": "2026-10-28T09:00:00Z",
+          "settled_count": 0
+        },
+        "error": null,
+        "operation": "clock.advance",
+        "request_id": "advance-1",
+        "schema_version": 1,
+        "status": "succeeded"
+      },
+      "exit_code": 0,
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        },
+        {
+          "event": "replay_hit",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        }
+      ]
+    },
+    {
+      "input": {
+        "command": "clock"
+      },
+      "output": {
+        "data": {
+          "clock_version": 2,
+          "current_time": "2026-10-28T10:00:00Z"
+        },
+        "error": null,
+        "operation": "clock.read",
+        "request_id": null,
+        "schema_version": 1,
+        "status": "succeeded"
+      },
+      "exit_code": 0,
+      "trace": []
+    }
+  ]
+}

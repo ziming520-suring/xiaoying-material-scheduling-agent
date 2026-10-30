@@ -1,0 +1,173 @@
+{
+  "evidence_kind": "actual_local_tools_with_offline_mock",
+  "scenarios": [
+    {
+      "scenario_id": "S01",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S01-actual.json",
+      "trace_files": [
+        "S01-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S02-actual.json",
+      "trace_files": [
+        "S02-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S03",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S03-actual.json",
+      "trace_files": [
+        "S03-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S04",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S04-actual.json",
+      "trace_files": [
+        "S04-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S05",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S05-actual.json",
+      "trace_files": [
+        "S05-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S06-actual.json",
+      "trace_files": [
+        "S06-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S07",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S07-actual.json",
+      "trace_files": [
+        "S07-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S08",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S08-actual.json",
+      "trace_files": [
+        "S08-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S09",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S09-actual.json",
+      "trace_files": [
+        "S09-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S10",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S10-actual.json",
+      "trace_files": [
+        "S10-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S11-actual.json",
+      "trace_files": [
+        "S11-run-1.jsonl",
+        "S11-run-2.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S12",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S12-actual.json",
+      "trace_files": [
+        "S12-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S13",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S13-actual.json",
+      "trace_files": [
+        "S13-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S14",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S14-actual.json",
+      "trace_files": [
+        "S14-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S15",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S15-actual.json",
+      "trace_files": [
+        "S15-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S16",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S16-actual.json",
+      "trace_files": [
+        "S16-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S17",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S17-actual.json",
+      "trace_files": [
+        "S17-run-1.jsonl"
+      ]
+    },
+    {
+      "scenario_id": "S18",
+      "local_check": "passed",
+      "real_model_executed": false,
+      "actual_file": "S18-actual.json",
+      "trace_files": [
+        "S18-run-1.jsonl"
+      ]
+    }
+  ],
+  "real_model_executed": false,
+  "limitations": [
+    "Not real model decision evidence.",
+    "Only final draft projection plus listed assertions are checked here; detailed behavior also has unittest coverage."
+  ]
+}

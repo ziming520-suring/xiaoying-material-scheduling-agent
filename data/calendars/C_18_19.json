@@ -1,0 +1,14 @@
+{
+  "calendar_id": "C_18_19",
+  "revision": 1,
+  "existing": [
+    {
+      "schedule_id": "EX.S18",
+      "slot_id": "S18"
+    },
+    {
+      "schedule_id": "EX.S19",
+      "slot_id": "S19"
+    }
+  ]
+}

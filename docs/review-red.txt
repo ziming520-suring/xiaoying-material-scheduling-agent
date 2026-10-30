@@ -1,0 +1,213 @@
+test_review_corrupt_nan_replay_remains_a_json_error (test_cli.CliTests.test_review_corrupt_nan_replay_remains_a_json_error) ... FAIL
+test_review_corrupt_initialization_result_is_rejected (test_runtime.RuntimeTests.test_review_corrupt_initialization_result_is_rejected) ... FAIL
+test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) ... 
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": true, "settled_count": 0}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": -1}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2030-01-01T00:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2030-01-01T00:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": NaN, "settled_count": 0}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": true, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}') ... FAIL
+  test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null, "extra": 1}') ... FAIL
+test_review_missing_replay_key_constraint_rejected_before_mutation (test_runtime.RuntimeTests.test_review_missing_replay_key_constraint_rejected_before_mutation) ... FAIL
+test_review_reordered_replay_schema_rejected_before_mutation (test_runtime.RuntimeTests.test_review_reordered_replay_schema_rejected_before_mutation) ... FAIL
+
+======================================================================
+FAIL: test_review_corrupt_nan_replay_remains_a_json_error (test_cli.CliTests.test_review_corrupt_nan_replay_remains_a_json_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 108, in test_review_corrupt_nan_replay_remains_a_json_error
+    result, body = self.write(raw())
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 33, in write
+    return self.call("run", "--db", str(self.db), "--input", str(self.input))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : {"event":"validated","operation":"clock.advance","request_id":"advance-1"}
+{"event":"replay_hit","operation":"clock.advance","request_id":"advance-1"}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\余淼\Desktop\小影科技\project1\src\schedule_agent\__main__.py", line 57, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\src\schedule_agent\__main__.py", line 52, in main
+    print(serialize(response))
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\src\schedule_agent\contracts.py", line 39, in serialize
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+ValueError: Out of range float values are not JSON compliant: nan
+
+
+======================================================================
+FAIL: test_review_corrupt_initialization_result_is_rejected (test_runtime.RuntimeTests.test_review_corrupt_initialization_result_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 287, in test_review_corrupt_initialization_result_is_rejected
+    self.assert_code(handle_request(raw("system.initialize", "init", "2026-10-28T09:00:00Z"), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'init', 'operation': 'system.initialize', 'status': 'succeeded', 'data': {'current_time': '2026-10-28T09:00:00Z', 'clock_version': 2}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": true, "settled_count": 0}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': True, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": -1}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': -1}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2030-01-01T00:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2030-01-01T00:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2030-01-01T00:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2030-01-01T00:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": NaN, "settled_count": 0}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': nan, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": true, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': True, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_corrupt_replay_responses_are_rejected_without_changes (test_runtime.RuntimeTests.test_review_corrupt_replay_responses_are_rejected_without_changes) (content='{"schema_version": 1, "request_id": "advance-1", "operation": "clock.advance", "status": "succeeded", "data": {"previous_time": "2026-10-28T09:00:00Z", "current_time": "2026-10-28T10:00:00Z", "clock_version": 2, "settled_count": 0}, "error": null, "extra": 1}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 279, in test_review_corrupt_replay_responses_are_rejected_without_changes
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None, 'extra': 1}
+
+======================================================================
+FAIL: test_review_missing_replay_key_constraint_rejected_before_mutation (test_runtime.RuntimeTests.test_review_missing_replay_key_constraint_rejected_before_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 308, in test_review_missing_replay_key_constraint_rejected_before_mutation
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None}
+
+======================================================================
+FAIL: test_review_reordered_replay_schema_rejected_before_mutation (test_runtime.RuntimeTests.test_review_reordered_replay_schema_rejected_before_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 297, in test_review_reordered_replay_schema_rejected_before_mutation
+    self.assert_code(handle_request(raw(), self.store), "STORAGE_ERROR")
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_runtime.py", line 33, in assert_code
+    self.assertEqual(result["status"], "unknown" if code == "OUTCOME_UNKNOWN" else "failed", result)
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+ : {'schema_version': 1, 'request_id': 'advance-1', 'operation': 'clock.advance', 'status': 'succeeded', 'data': {'previous_time': '2026-10-28T09:00:00Z', 'current_time': '2026-10-28T10:00:00Z', 'clock_version': 2, 'settled_count': 0}, 'error': None}
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.271s
+
+FAILED (failures=13)

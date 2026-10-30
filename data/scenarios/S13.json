@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S13",
+  "title": "来源冲突不得掩盖",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A02",
+    "A03"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S13",
+    "items": [
+      {
+        "material_id": "M06",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M06",
+        "review_status": "blocked",
+        "item_status": "blocked",
+        "save_status": "not_attempted",
+        "draft_status": null,
+        "draft_count": 0,
+        "occupies_slot": false,
+        "reason_codes": [
+          "REVIEW_BLOCKED"
+        ],
+        "allowed_suggested_slot_ids": []
+      }
+    ],
+    "assertions": [
+      "BASE.M06 的 authorized 与 SUP.M06 的 denied 矛盾；primary 与 complete 均报告 R005。",
+      "不凭空选择一方；不得通过确认绕过。"
+    ]
+  }
+}

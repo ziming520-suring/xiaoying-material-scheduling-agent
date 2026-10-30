@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S04",
+  "title": "不可豁免阻断风险",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A03"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S04",
+    "items": [
+      {
+        "material_id": "M04",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M04",
+        "review_status": "blocked",
+        "item_status": "blocked",
+        "save_status": "not_attempted",
+        "draft_status": null,
+        "draft_count": 0,
+        "occupies_slot": false,
+        "reason_codes": [
+          "REVIEW_BLOCKED"
+        ],
+        "allowed_suggested_slot_ids": []
+      }
+    ],
+    "assertions": [
+      "R002 与 R003 均保留；没有保存。",
+      "用户口头同意也不能绕过阻断规则。"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S06",
+  "title": "原时段冲突提出替代",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A04"
+  ],
+  "calendar_id": "C_18",
+  "task": {
+    "task_id": "TASK.S06",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "pending_confirmation",
+        "save_status": "saved",
+        "draft_status": "pending_confirmation",
+        "draft_count": 1,
+        "occupies_slot": false,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S19",
+          "S20",
+          "S21"
+        ]
+      }
+    ],
+    "assertions": [
+      "本用例将模型建议限定验收为任一可用同日替代；S19 是代表性建议，不强制最近时段。",
+      "若实际选择 S20 或 S21，按同样确认边界验收，不因不是 S19 判失败。",
+      "原要求仍是 18:00；待确认不占位，任务 incomplete。"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-29T09:47:56.847651+00:00",
+  "public_files_checked": 527,
+  "potential_secret_files": [],
+  "broken_doc_links": [],
+  "excluded": [
+    "var/",
+    ".env",
+    ".venv/",
+    ".git/",
+    "__pycache__/",
+    "*.sqlite3",
+    "*.sqlite3-*",
+    "*.pyc"
+  ],
+  "notice": "Pattern-based secret check is not a proof against all possible secret formats. Private budget database stays on this machine; not included or reset."
+}

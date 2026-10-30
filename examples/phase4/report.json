@@ -1,0 +1,423 @@
+{
+  "generated_at": "2026-10-29T09:42:25.482891+00:00",
+  "unittest": {
+    "tests": 107,
+    "seconds": 17.75,
+    "failures": 0,
+    "errors": 0,
+    "file": "test-results.txt"
+  },
+  "live": {
+    "model": "qwen-plus",
+    "started_at": "2026-10-29T09:31:49.368222+00:00",
+    "updated_at": "2026-10-29T09:38:35.086996+00:00",
+    "requested_cases": 34,
+    "executed_cases": 34,
+    "passed": 33,
+    "failed": 1,
+    "source_unchanged": true
+  },
+  "offline": {
+    "requested_cases": 54,
+    "executed_cases": 54,
+    "passed": 54,
+    "failed": 0,
+    "source_unchanged": true
+  },
+  "core_repetitions": {
+    "S01": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S02": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S03": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S04": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S06": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S09": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S10": {
+      "executed": 3,
+      "passed": 3
+    },
+    "S11": {
+      "executed": 3,
+      "passed": 3
+    }
+  },
+  "failures": [
+    {
+      "scenario_id": "S08",
+      "round": 1,
+      "passed": false,
+      "checks": {
+        "contract_assertions": true,
+        "initial_status_matches": false,
+        "no_model_errors": true
+      },
+      "real_model_executed": true,
+      "model_mode": "bailian_live",
+      "error_type": null,
+      "initial_statuses": [
+        "save_failed"
+      ],
+      "model_errors": [],
+      "elapsed_seconds": 12.078,
+      "actual_file": "round-1/S08-actual.json",
+      "traces": [
+        {
+          "file": "S08-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    }
+  ],
+  "live_stage_usage": {
+    "calls": 170,
+    "prompt_tokens": 328775,
+    "completion_tokens": 13886,
+    "estimated_yuan": "0.2907920",
+    "settled_conservative_yuan": "0.370433"
+  },
+  "cumulative_budget": {
+    "policy_version": 2,
+    "calls": 266,
+    "usage_known_calls": 266,
+    "reserved_yuan": "0.000000",
+    "settled_conservative_yuan": "0.577982",
+    "accounted_yuan": "0.577982",
+    "limit_yuan": "10.00",
+    "remaining_yuan": "9.422018",
+    "prompt_tokens": 512723,
+    "completion_tokens": 21753,
+    "estimated_yuan": "0.4536844",
+    "notice": "Provider usage settled conservatively at 1/3 CNY per million tokens; unresolved calls keep 0.10 CNY each. Not the provider bill."
+  },
+  "dynamic_paths": [
+    {
+      "scenario_id": "S01",
+      "traces": [
+        {
+          "file": "S01-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S02",
+      "traces": [
+        {
+          "file": "S02-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S06",
+      "traces": [
+        {
+          "file": "S06-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "S11",
+      "traces": [
+        {
+          "file": "S11-run-1.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft",
+            "finish"
+          ]
+        },
+        {
+          "file": "S11-run-2.jsonl",
+          "actions": [
+            "read_material",
+            "check_rules",
+            "query_slots",
+            "save_draft"
+          ]
+        }
+      ]
+    }
+  ],
+  "runtime_matches_live": true,
+  "current_source_and_data_sha256": {
+    "data/calendars/C_18.json": "68ed58c39b3f6c49dcf18c105a1c2f9e668ed75e71ee6f1284f2ac192a7a9be1",
+    "data/calendars/C_18_19.json": "4a7ba3a2f3d7a3b49e777fb3544151d0125b7526b78a5dddd6d79bb124fb8a49",
+    "data/calendars/C_19.json": "fd47cd7504606f2db5c1bd3de271b356026a2dba26162564d27257604f0db238",
+    "data/calendars/C_EMPTY.json": "fe4cd92889f6302295546fd11cfaf53de885c34303a1a657098b5cad03dda808",
+    "data/calendars/C_FULL.json": "637501926c47f2c49fdbe0be34b9c174447264fb1771f13e3365252e27e65ae4",
+    "data/manifest.json": "3e784ba3354fa16336ce478b98765028a0b5bcf32c108b40057a9534d9b4b0d4",
+    "data/materials.json": "fe3884cce710ee834a4dabedda9fb54c00726b9e5b1645eec07522c1d0c125cf",
+    "data/rules.json": "d5ada9f9976b9f128e3c55238801ab1a9c4d901a25d86b8274290a18e0829704",
+    "data/scenarios/S01.json": "05f32180f1480fff1e4392f692f90d9590d03f2defc037b935139b374890992a",
+    "data/scenarios/S02.json": "074aefcc831d188c6e114c668cc8086a5dfc49562bc4c600ae6c1a53a40ed216",
+    "data/scenarios/S03.json": "df66987fa1cb08b15284a251d302d3c5cc2578c717a67f077eaca7a36eb1c9a3",
+    "data/scenarios/S04.json": "ca7a9d9ad719ee4bc8fa56d2c0463149ad8f21c63ded4114483a1ff017b6acab",
+    "data/scenarios/S05.json": "eee5812f947fca6c0f733665489cb4c62c49e5a1bfd9f1f9c7a3ed1e0da82bba",
+    "data/scenarios/S06.json": "4cd37789785d101faf93aacd8de1dc5e1a00b0721bd0e0224d5c0626824c4ca4",
+    "data/scenarios/S07.json": "a660df48647b87eeb037056cbcb9791be2c7b056104f94e1dc033f247274a6d8",
+    "data/scenarios/S08.json": "496c358f437d545c7061d11781924137016941efaf4f336ac8977a58f24401a8",
+    "data/scenarios/S09.json": "b3f8b502b17ba03adae367a1a0d609f5e8a3d3ced4975b4d64e62e3c04c3b9ff",
+    "data/scenarios/S10.json": "4ab9c663d9232f82e951ab4f5a60f7743c4287f849e047ba92c594a49b9ba7f0",
+    "data/scenarios/S11.json": "3bbd020d227a8b8514c2d6efedec93594b7b2bef8c21532d02174180d3ba4ced",
+    "data/scenarios/S12.json": "b779565edf78e304a656a24650a4ec681d2d764005bf0043d1f5bc23d2b970af",
+    "data/scenarios/S13.json": "b61b5e55f4bd0d17c77de9c25b4b124c911e1a419118c240be30aed87d024475",
+    "data/scenarios/S14.json": "5462afc648bd5cae65ba5f71bc8ab73aec98e532300635aca65af68cb95e6641",
+    "data/scenarios/S15.json": "4ef1e0902c9510078f70bd2536f6cde49d65e9d04ef348cfdfdc640887b1743e",
+    "data/scenarios/S16.json": "e9cc2c134de0c46a62dd99fa73ad4aa5db42a974417f7ef9bd302ff82467c676",
+    "data/scenarios/S17.json": "e21b58ac969c706a6bd7e6d16fed265f0e05343cdeb46da671ac11f2da746fe4",
+    "data/scenarios/S18.json": "7a7dd03a344d22555663c0e2a7d8bf6b7bc3660172acf977b633a73e079404e9",
+    "data/slots.json": "95b6ce77fedb24fc8fd204ecde857dc1633a52d60675019adefa6f58dafa0b1a",
+    "data/supplements.json": "bd3206467d1197999836c1f49a382448931dac3c513cd2bf62f2e99c0781289f",
+    "src/schedule_agent/__init__.py": "2a9af73f7f89d271acad72a7ea8b47fa3415526bcf9df97e630a69a449b0ef83",
+    "src/schedule_agent/__main__.py": "e775eed6a3c91ec66e62c5d9ec0134b03e60fe490da933ad37ae03a287eb78aa",
+    "src/schedule_agent/agent.py": "e13d79352d90da29d0f360febf790fa02a6ecac63f1df9e4b9735c80e29cae83",
+    "src/schedule_agent/bailian.py": "8eefe28ecd594fa02da17690be5b1d13e63827cec3e77fd9d17cd7e83231b062",
+    "src/schedule_agent/budget.py": "5a08dd925fda35605a8e60f75bdaef52fb709cd48bd98b98e83061b447587374",
+    "src/schedule_agent/business.py": "65a2c94550dc628a13540e16670cf9d17c3a6fdf93d792e16f86195c58cf8244",
+    "src/schedule_agent/business_schema.py": "d3b2beb3dd63448eba1e657a6d7e64990187976e55ffc5c13c6371a572ed52d0",
+    "src/schedule_agent/business_validation.py": "91a8774dbc81270d2fa1371cc13f6f5dfd2d44bd3b04620eb54bed6c9ec41bd9",
+    "src/schedule_agent/contracts.py": "b31a2c9bd58b8890899c83d620f440f9e9a6c9991952bc506adea590f67664c6",
+    "src/schedule_agent/draft_tools.py": "f7c4bae5b5751a81d7cd27196644952798cdbe13b67edb27b0fd8fcf6f36f660",
+    "src/schedule_agent/material_tools.py": "c13dc69ccf90ca542a22183c5031335a33a48353debd1d3ff5bbbaf8cf2a06eb",
+    "src/schedule_agent/model.py": "8d46b265fd0fb8f4037655778a7c781d9b17fdb80ff2db70767e861221218343",
+    "src/schedule_agent/runtime.py": "3006bccb00fd6a2472d2624cdf6bb0f7c58d9c5e2853ed3ef8e9fc95385b1417",
+    "src/schedule_agent/storage.py": "45577a0aa078cb5c69de2e1d098a725bcfca9057901bf8115fb5b6c6536eb953",
+    "tests/phase4_evaluate.py": "22aaf560f371332c8d5831e0b6593853a89ccd639efc44a1a037b767d5bedf1c",
+    "tests/record_business_evidence.py": "58e687741a19177e8fb267a9e1f3fee411e91eb2ebe4b4469098268aec1faf7c",
+    "tests/runtime_helpers.py": "eea07b9a27c01162672118eda0b5025719aba40eef35837b8986fcf5f93cd4d6"
+  },
+  "evidence_sha256": {
+    "examples/phase4/live/round-1/S01-run-1.jsonl": "ae350a63135a550bb6ea1197de5d3c99060728b1f67e9a7499c779039dc20375",
+    "examples/phase4/live/round-1/S01-actual.json": "2c92f012938975c69939eabb062472a76e888ac6f2c77f0c17bd1de6b12e06e0",
+    "examples/phase4/live/round-1/S02-run-1.jsonl": "a9d51b322ece4a9025c36ed23aef05ae2e492d5f497ea47c5976460cb0691fe4",
+    "examples/phase4/live/round-1/S02-actual.json": "2c0a8daa5acb0431ab3622654e3b69bfebd70e7bb310ffd384f9743a3c276e1d",
+    "examples/phase4/live/round-1/S03-run-1.jsonl": "f9f8728dec0f1e23e5f8ddcfdc59e0098178d40ac9dc2e87ee43692ffd95aae2",
+    "examples/phase4/live/round-1/S03-actual.json": "de79f98316f5ae1c77ce394f949a8d832dcc85cce4dac6a427672c5135f7af0b",
+    "examples/phase4/live/round-1/S04-run-1.jsonl": "aafa239b930bea48cf2890e3fdd7d923927cc8b9dcb5cab4edb8c0042f85115c",
+    "examples/phase4/live/round-1/S04-actual.json": "5b1b7ee2f2ea23f09fc9d1dcaa31884693dc1791910876fc9ebf9c18b8067e06",
+    "examples/phase4/live/round-1/S05-run-1.jsonl": "272164a3b55ebd27dbb1dbba333215509844cf8ad1f19fd46e72aea1e741c2bf",
+    "examples/phase4/live/round-1/S05-actual.json": "7cf9f2a2d7a1b1a56ae31baa9560aa4c6ea10f32cbb475d31d5271eed41fc85a",
+    "examples/phase4/live/round-1/S06-run-1.jsonl": "2a32e3124382d0e4dd6d6beb385362fa2b295ec074012e34ce2719fc08385062",
+    "examples/phase4/live/round-1/S06-actual.json": "e44f1a7a77dfd1e9f605d3d129076193a5ceef72003d82c1365254f52121a152",
+    "examples/phase4/live/round-1/S07-run-1.jsonl": "936bcc59fa01aa75cccc8ef45a6e385d4f79701ed562f69a1305acd9ef3a7862",
+    "examples/phase4/live/round-1/S07-actual.json": "796d41dbe2be1a68d6a0c876af6fa6bffd88bd174b2a3cec0ce0fb64116a7cc0",
+    "examples/phase4/live/round-1/S08-run-1.jsonl": "9f1ecb5044bf496a501d72778eec8c49bba0c42a140cc694693196dbb74a0f69",
+    "examples/phase4/live/round-1/S08-actual.json": "3eafc17ff6dbe1e86c621f4a39f2bfc702972403ff99767ba5f73e539a47ed5f",
+    "examples/phase4/live/round-1/S09-run-1.jsonl": "99895a98b10158e8643a70cb4d8e79a7a7f6e689004e0e504207e331028b6079",
+    "examples/phase4/live/round-1/S09-actual.json": "a87e24bc28636cf185072dfa843a596ef6344bcc6f95acabc955be3d2d37cc19",
+    "examples/phase4/live/round-1/S10-run-1.jsonl": "c18912b575dd0b17165c2aa22822025a18a8b4e7ae3202692825fef5926b73b1",
+    "examples/phase4/live/round-1/S10-actual.json": "b8ae536abef663a20d9a552c607c7227061aaeb4d358b3940412fe2701edb719",
+    "examples/phase4/live/round-1/S11-run-1.jsonl": "05a08b137a8b138ca775da899f1d1a5774a660132d750d3387b2dd5e80eb0fc6",
+    "examples/phase4/live/round-1/S11-run-2.jsonl": "a54790c846a2498e3be25f8bf8229eb384f79a2ddd5eeff3f743fe8312a8696b",
+    "examples/phase4/live/round-1/S11-actual.json": "b7c0e3ba70c4bf34de06dd3fd609e1ca3e60d14e87d3aa860a59c3d263ae2109",
+    "examples/phase4/live/round-1/S12-run-1.jsonl": "436a3776af312c86f1efd376a30086a3eb8e5463dcee7eebe7a5f79f0f1af448",
+    "examples/phase4/live/round-1/S12-actual.json": "dfbb683edc37a51b072d611fd41ca82561ff2eeeb0260987fe7828cb565a4725",
+    "examples/phase4/live/round-1/S13-run-1.jsonl": "bd269f3f2ec6fbb0b3902c591bfe6c7cd450c23396d515381f760f1562f52eeb",
+    "examples/phase4/live/round-1/S13-actual.json": "20dc2555896e32b2704ca83766049e7bc87294e5d5295ccbe5dd4db57aed6690",
+    "examples/phase4/live/round-1/S14-run-1.jsonl": "5096a3185df0785b8626fd4313fcef0d54b76f71beb159ee5dbc1c2f09134539",
+    "examples/phase4/live/round-1/S14-actual.json": "e97c02226fd42c21eeb856a11f9e1b21494f504ec304a3de4ec73acbd35d1c65",
+    "examples/phase4/live/round-1/S15-run-1.jsonl": "0543afe02b1e490f2e7a00be2e419a76d18a9a19a5a51f1c61e053b724dd0390",
+    "examples/phase4/live/round-1/S15-actual.json": "319326423164d2971d0d6d653f60394a421aea4583194c66a92656c6efd8f1d4",
+    "examples/phase4/live/round-1/S16-run-1.jsonl": "77dd2cba06082fcb07b7c23e7e2c3659601bed52ebba0cfe622a4f50aaad3845",
+    "examples/phase4/live/round-1/S16-actual.json": "d5852904b941f26ab36cea1adaabde84b85aceb4d76b5fe17c94261c34e7c473",
+    "examples/phase4/live/round-1/S17-run-1.jsonl": "d4831e7186e11b122b123103050a18935dd19cd427877d9e4480bffdfb58be7d",
+    "examples/phase4/live/round-1/S17-actual.json": "6de1c8af7ff8ba72b9348aa94e0cef38dfb3cf379c88dc86626f809d754efdd6",
+    "examples/phase4/live/round-1/S18-run-1.jsonl": "8c544adb358ccd78fd69dd0f77f48b12996c18ff433ebb33379e58d6769922bc",
+    "examples/phase4/live/round-1/S18-actual.json": "8936cf51c31a540f0f6842106d285e3d7e84d58a4fb235339289ca1acb40a69c",
+    "examples/phase4/live/round-2/S01-run-1.jsonl": "f9a06cb82ac97d450f92612cb1e66d7771819b2eba5beea4dbeb51070570813a",
+    "examples/phase4/live/round-2/S01-actual.json": "b018ce66ec8324043b1577c1ddf4192c57e8567c289bcaa611ec2246315f512a",
+    "examples/phase4/live/round-2/S02-run-1.jsonl": "ea62f86cc983a0df8e432fa063f3f31516375938b3c01906547f839b8bbfba98",
+    "examples/phase4/live/round-2/S02-actual.json": "4684641a2570a8f6db936f768785ee7f0c6b944fa2d8ba4abc272015dd77cb80",
+    "examples/phase4/live/round-2/S03-run-1.jsonl": "b316dd65f6a7db4d7d487caec08418c71fa3b61984057c2724a36391edb6a97e",
+    "examples/phase4/live/round-2/S03-actual.json": "ba30b9673c6b6ae4eda98287e16ab3e80018c03d9c981e9d1fb0defbfa36a0a2",
+    "examples/phase4/live/round-2/S04-run-1.jsonl": "5ee58acd8e781bf992b545281076d49c8bd31cd7441820dc83c541858db0033c",
+    "examples/phase4/live/round-2/S04-actual.json": "6bb2faa0ecb33533dfc8cd6db4ab56ca0d8da9d55c61dd7c07e89f2e1ff69432",
+    "examples/phase4/live/round-2/S06-run-1.jsonl": "a9f044eb05ce3e3314ab9f00165c06b6e13763d91e7e8154bca5d829176affa9",
+    "examples/phase4/live/round-2/S06-actual.json": "fb880fc24f9ddde626a553ea10dbeb93784b54af6459e7cfa487f6e7dcca1a39",
+    "examples/phase4/live/round-2/S09-run-1.jsonl": "96de4df5a5f55bb713312cddceff8313d26c8f0e509ba24bfe9d37296c2d2e1b",
+    "examples/phase4/live/round-2/S09-actual.json": "7b6e1b129c3b74826e96977bd81f727bcf44a96b3ea13bc13cd51e307a9b4ef4",
+    "examples/phase4/live/round-2/S10-run-1.jsonl": "bae86c5e68451d4f18e3015d33e01b387409f24a0f058d927a91a9b943f16d6c",
+    "examples/phase4/live/round-2/S10-actual.json": "f2bdf0cd2f031fab00ccc250a18886fb00e090bc7c27e68f851c33c10fdfd018",
+    "examples/phase4/live/round-2/S11-run-1.jsonl": "2bd3163356ce3b42017ef79b5dbc2fae63882f7ec3a9ac4ae7efae41b6f322e2",
+    "examples/phase4/live/round-2/S11-run-2.jsonl": "33f6a034cef31a95809e55ae811685477b9b15c8f096d74a4f82fd30976feac3",
+    "examples/phase4/live/round-2/S11-actual.json": "3d2c68858422b9c0b3462adc17f38dbc357f7806de9e71d57eaed81dc0105b10",
+    "examples/phase4/live/round-3/S01-run-1.jsonl": "37da23adc9cf52b7e47b131ef99a2b752ff070222a57c96455869a808d3292eb",
+    "examples/phase4/live/round-3/S01-actual.json": "445644a71ac43990588433b6ff6db56987d20994d241c1fc11e9bfd7545fee9e",
+    "examples/phase4/live/round-3/S02-run-1.jsonl": "992681bca4893758f90ac43328ef6ea1cb9b0a51d95731010503bc8b753cc51c",
+    "examples/phase4/live/round-3/S02-actual.json": "351cef8502291acf9c500bcae51de318fe5fc138f7876add44880544d13fa3c8",
+    "examples/phase4/live/round-3/S03-run-1.jsonl": "a7746bfa78ebdf923197a2901124c399de14e2f95751a3eacdcad4a97bba507d",
+    "examples/phase4/live/round-3/S03-actual.json": "ea18346a7b6063cdc80adc225aadca525580c8e7ec01fa4942b52a05be6cbc58",
+    "examples/phase4/live/round-3/S04-run-1.jsonl": "f51d0a69ece85404834b6ec33f7386320ca751719f1561a9000c62d61efbc526",
+    "examples/phase4/live/round-3/S04-actual.json": "98c71b823bfbbddde74e2401fb439b9d0d4d42ab5149f01ed08ed3f8825c08c5",
+    "examples/phase4/live/round-3/S06-run-1.jsonl": "955d962850da5157204dbbaebb155c476fd2cc5793295d89051cf0b5124c58a6",
+    "examples/phase4/live/round-3/S06-actual.json": "77d8227aafa014a5cca251953901420794897e44ee3a6934551352c4742293e8",
+    "examples/phase4/live/round-3/S09-run-1.jsonl": "07fc1dc2abe85407b2e25d8db768e7467fbcdc6fae1f2e8ebcdc73010b33efb0",
+    "examples/phase4/live/round-3/S09-actual.json": "5a6f5b7ddc2fff23e943d1df372c28947ffdef168ac1b8f7fdc1c39162975fa3",
+    "examples/phase4/live/round-3/S10-run-1.jsonl": "5d064dbcd7fb940667159dc3c93ea79666c818dcc3f1e70961e9d5df83d13dae",
+    "examples/phase4/live/round-3/S10-actual.json": "79a7e57ef3eaa9b92d27f37dc19b0e801f3d6952aa31c9f56074538f08a20378",
+    "examples/phase4/live/round-3/S11-run-1.jsonl": "21dfc4ed3cce6ac401851a336198d5d3b218a0e117a23174080feb820e5bf09f",
+    "examples/phase4/live/round-3/S11-run-2.jsonl": "ece8d6573acbfe2b6830b36f8173aaa917f1a9cc1ed981a4aa1f25d530c5484b",
+    "examples/phase4/live/round-3/S11-actual.json": "52443ee6628793decb3875484a6a11a53aa15234a050a0bb041abd3c47a720ef",
+    "examples/phase4/offline-final/round-1/S01-run-1.jsonl": "c95144995add68bf0b737d700d16198269a679f852d9de86f24da324d6c17641",
+    "examples/phase4/offline-final/round-1/S01-actual.json": "3f5a1b2b19ff89cf8d50ccab490b3f51a3b18545b97b6df71bf580eb9d1eaffa",
+    "examples/phase4/offline-final/round-1/S02-run-1.jsonl": "c112cd0a3b31912bc0dcf838b41aef6ffb5ecf40485dc480df1069de3ecfa8ad",
+    "examples/phase4/offline-final/round-1/S02-actual.json": "833b05dd67c28b341c7fd9059ee88e3b7c48c1c462d889314e20bd5da2296f6b",
+    "examples/phase4/offline-final/round-1/S03-run-1.jsonl": "14c0588cf3c5df87412d78a5c2cf3e8985a90b7a3bf076f9f1336aedade22b24",
+    "examples/phase4/offline-final/round-1/S03-actual.json": "e3668453d48d19b4f4fe77b288eb52476f16206631210fdd1a9fc1da36e2f2d9",
+    "examples/phase4/offline-final/round-1/S04-run-1.jsonl": "161eea5750121c64c610e0d8c49e79df362503a4f44568ad9998dbf63faaaa78",
+    "examples/phase4/offline-final/round-1/S04-actual.json": "93c0209299cbd866e56d5b4e15df50b5d2ef31227cf639536026d77c3f66e251",
+    "examples/phase4/offline-final/round-1/S05-run-1.jsonl": "0c0adb002827b4030451537a514d1c72687b748c22f4c24096459120d685d1cd",
+    "examples/phase4/offline-final/round-1/S05-actual.json": "b401755fb4badead6e9fac00f834b53ac0bd81500c7e3328f9b47317a4f2ba2d",
+    "examples/phase4/offline-final/round-1/S06-run-1.jsonl": "bbbcd2272847a9925a959ced736700e9490f9da6d7ccac9a1ff1311b0b58e15b",
+    "examples/phase4/offline-final/round-1/S06-actual.json": "775ef5cac0371ee99efdf191cc915672a5812e9b5d60635d9ef8091c8638897c",
+    "examples/phase4/offline-final/round-1/S07-run-1.jsonl": "cddc299518e49fb454bffca49cc97bd2981359058325568f12ff0fb2885942b7",
+    "examples/phase4/offline-final/round-1/S07-actual.json": "5d14fad6b26c3201ef62c6a4ef16294d5c4416f60f847e9060f200bfffd719e7",
+    "examples/phase4/offline-final/round-1/S08-run-1.jsonl": "57fff52a258ab81de9a1b9eaa7ccf6586cb3f4e642d979981dcecb9aee6b169b",
+    "examples/phase4/offline-final/round-1/S08-actual.json": "adb371ba1edace74d14602b2cb218801461449ba59e4f04882cf302186444f49",
+    "examples/phase4/offline-final/round-1/S09-run-1.jsonl": "546449be028dc33620dac5278880029d622adb87a566ed450e5d767073658f62",
+    "examples/phase4/offline-final/round-1/S09-actual.json": "9accdeae7ce32176d45a9d80e9347ef0e1991dc8a1f0291595c1e196474a600c",
+    "examples/phase4/offline-final/round-1/S10-run-1.jsonl": "7d31f1daf4dd82c0406f66187559c2851dae848873590174700736af0456a41d",
+    "examples/phase4/offline-final/round-1/S10-actual.json": "9c5e239a3ca2164ca92f2f6491dc1d28ab93590645ee78b2d0938a1009acf5bd",
+    "examples/phase4/offline-final/round-1/S11-run-1.jsonl": "534954e03cf58b9105bf528b6843a73d166bf1350682a213ed215c3f89436c6e",
+    "examples/phase4/offline-final/round-1/S11-run-2.jsonl": "01e77dc09ad42e9a9813c05879307bba8cc9c7803cb1385056dccf1bffa68bd9",
+    "examples/phase4/offline-final/round-1/S11-actual.json": "3c99d205eb880698a5fbd1803fcee1773faea4966ea3cf6409bfff9fdc7b1612",
+    "examples/phase4/offline-final/round-1/S12-run-1.jsonl": "359286983b17bfe9fb42f574f454ae233cfef090f2e38a7200747e3774c21ab8",
+    "examples/phase4/offline-final/round-1/S12-actual.json": "259efb7a27acf00e923a4f839dc35cf2aca24f5a5636019d340d5505a1a4443b",
+    "examples/phase4/offline-final/round-1/S13-run-1.jsonl": "7e07bd790aa6457b70b9279014bbc85306fed9e5dd345d4fa97473d5ab58620b",
+    "examples/phase4/offline-final/round-1/S13-actual.json": "791464c51fcc19eb292024f1c0b1cc9f243d3d3d961f1e7e3721d1513012414b",
+    "examples/phase4/offline-final/round-1/S14-run-1.jsonl": "e53bcc939cb02f0a2765210d71d3083f06207242cdb577f45afd188c433522f4",
+    "examples/phase4/offline-final/round-1/S14-actual.json": "22facd688f752453eb80c2549312151c05ea9c7ef5a099974bd99d2d486f2b79",
+    "examples/phase4/offline-final/round-1/S15-run-1.jsonl": "ede77129ac7eb30c254be0986224f290897a39f7f6b1ad5bf9e682f26653b16a",
+    "examples/phase4/offline-final/round-1/S15-actual.json": "da9d145702d56b7613318db62204df043e68a7d7e244c2d8f0101db23ef2ccbd",
+    "examples/phase4/offline-final/round-1/S16-run-1.jsonl": "0c31fe2c36114077e91888cd3f108f42458af3f940331bbf3728fcf0bf0fcfee",
+    "examples/phase4/offline-final/round-1/S16-actual.json": "0ab94b70f43015a569253bbe712dd6a3fed149628b24bc3e34ceae6e9d3ea27e",
+    "examples/phase4/offline-final/round-1/S17-run-1.jsonl": "e6bb224cf8a7434ea298776743bbbbeb5244e22d17e965dbc54b1fa023192562",
+    "examples/phase4/offline-final/round-1/S17-actual.json": "c4006e6539632ccd0c0bf691f1276af87c770294cae82f23c0bd1de7334f69bb",
+    "examples/phase4/offline-final/round-1/S18-run-1.jsonl": "9f0aa26e82bc7ade534dc2cbaa7c3911508d2877ef605992bc54212e2cf26c31",
+    "examples/phase4/offline-final/round-1/S18-actual.json": "8404d545873354b80fbc9eb9cd3d8ab19e53d8060037b6b65ab0b5ec7df7a979",
+    "examples/phase4/offline-final/round-2/S01-run-1.jsonl": "6ae67f6063e8996600c1ff3a49cb47bba629bf0e6dff1fa413f24be4a239b9ef",
+    "examples/phase4/offline-final/round-2/S01-actual.json": "9dd12e03bc56b26e596fa1db3c9583d49790b86bd105eff8505067d4ff8c3af4",
+    "examples/phase4/offline-final/round-2/S02-run-1.jsonl": "ce3102c1893b05990a4e527463ce147be59f7cc73b3383e9ab42ba140a9e03b1",
+    "examples/phase4/offline-final/round-2/S02-actual.json": "f720bb4c419b3e674d1851ed6f9661d44a226a93f771541eb55373e3240210fb",
+    "examples/phase4/offline-final/round-2/S03-run-1.jsonl": "14c0588cf3c5df87412d78a5c2cf3e8985a90b7a3bf076f9f1336aedade22b24",
+    "examples/phase4/offline-final/round-2/S03-actual.json": "39342b9cdbd977c755c52874ca8a078e445e7f05ac4e65aad36139cb036b3324",
+    "examples/phase4/offline-final/round-2/S04-run-1.jsonl": "161eea5750121c64c610e0d8c49e79df362503a4f44568ad9998dbf63faaaa78",
+    "examples/phase4/offline-final/round-2/S04-actual.json": "2e79d0ca038ef5ab1655bd41522b01a1a4edb23798e8d55c8a8f223dd73b6bef",
+    "examples/phase4/offline-final/round-2/S05-run-1.jsonl": "374db99f7946a74919b97e083bcedb3272eafa66dd4fbeb078d6971daebf9612",
+    "examples/phase4/offline-final/round-2/S05-actual.json": "b5bb0efb58ae976a941552890651e7872a0a8a0b176a7eaa4cf57c3d9647ce97",
+    "examples/phase4/offline-final/round-2/S06-run-1.jsonl": "3708e51ab4807302208f4450856b81078b23d0c332ea60e048719d7322b6c947",
+    "examples/phase4/offline-final/round-2/S06-actual.json": "8bb88bf3501ecc0103ef39ca00dd9a480962a5734e7a0146ff712d76ea0c08a6",
+    "examples/phase4/offline-final/round-2/S07-run-1.jsonl": "055054c54f5dd62d74c8146810073794a19df425ec3e886b9f910c9c6b623bba",
+    "examples/phase4/offline-final/round-2/S07-actual.json": "bbbae3fadfc984c64b72394f1755c4008da06c133fee0ff3e30c0a9eb1a1f8e3",
+    "examples/phase4/offline-final/round-2/S08-run-1.jsonl": "57fff52a258ab81de9a1b9eaa7ccf6586cb3f4e642d979981dcecb9aee6b169b",
+    "examples/phase4/offline-final/round-2/S08-actual.json": "4cda6bf84b6534538345eb7ed82989f11939fa35a49bf2dde44e8c5f5fa768e9",
+    "examples/phase4/offline-final/round-2/S09-run-1.jsonl": "b8cf7683784e2e5c64176e16537cc37eb27e5d164165b01d05a28f605c74a926",
+    "examples/phase4/offline-final/round-2/S09-actual.json": "6fc39725eedecd058cca081c78a6bf6c05ccfc37a15d02f68afb91a6118827b5",
+    "examples/phase4/offline-final/round-2/S10-run-1.jsonl": "1812c814f5f0dc67ff1030fa930be4e5eeb1385b0fc2ea58d121294775e46c74",
+    "examples/phase4/offline-final/round-2/S10-actual.json": "cb38d3077916d4684194723b7bdf8f6bd8d4d5460d744a47210560ad279c3ef4",
+    "examples/phase4/offline-final/round-2/S11-run-1.jsonl": "1ed8ca6172ed8c3483cd5e138ab770e40a5d9db8bcefb59430671f57224a650c",
+    "examples/phase4/offline-final/round-2/S11-run-2.jsonl": "283403366dc8b04554b9b95a6239d6349f365b2176422e1c19377320d8e3eedc",
+    "examples/phase4/offline-final/round-2/S11-actual.json": "893943f27da0422f54c507715b75f2a1d6f7cea121ef832f3b34fe6e55050095",
+    "examples/phase4/offline-final/round-2/S12-run-1.jsonl": "53a42d20ae9dcda09c9c3b0eef1310c2ab76a051b74cff408303d78b86fa7959",
+    "examples/phase4/offline-final/round-2/S12-actual.json": "adc4ba8a1e33ea53858daaa65f25f88dd46e9613f8dd8e7cea47d146798222b5",
+    "examples/phase4/offline-final/round-2/S13-run-1.jsonl": "7e07bd790aa6457b70b9279014bbc85306fed9e5dd345d4fa97473d5ab58620b",
+    "examples/phase4/offline-final/round-2/S13-actual.json": "3017f1e69fa8cffa97dd39c1442cd5f43012dffe45e411514a158fefaf8c7f8e",
+    "examples/phase4/offline-final/round-2/S14-run-1.jsonl": "e53bcc939cb02f0a2765210d71d3083f06207242cdb577f45afd188c433522f4",
+    "examples/phase4/offline-final/round-2/S14-actual.json": "4996448f08f963db3b55abcba9f394334991ce656725d94e681c9958ebf73dae",
+    "examples/phase4/offline-final/round-2/S15-run-1.jsonl": "68a1eb862d9e86e2a1377e07f5edfe06bb22c0f7a92ebac3319710546e688cb1",
+    "examples/phase4/offline-final/round-2/S15-actual.json": "f2919849ce304af4f009a9a6dab10cc9d534833b9c150bdd00cfd3fd344b29f1",
+    "examples/phase4/offline-final/round-2/S16-run-1.jsonl": "3c0b1a03e92fe6efac8fbb193199e3c13906822c857c65efcb42d5f242737d9f",
+    "examples/phase4/offline-final/round-2/S16-actual.json": "0aa8061e30e068ef1d442271ebf3f99dc383b32872da7c3738c7090c6ee8db21",
+    "examples/phase4/offline-final/round-2/S17-run-1.jsonl": "9b18955a428af74efac024cb62eab6762bfccc891aa071874150ec8d941dfd9a",
+    "examples/phase4/offline-final/round-2/S17-actual.json": "996c8d8afe2b4e7c08a177fec4d7ad868b46d3602b6af92c3cd374534a5ae3c0",
+    "examples/phase4/offline-final/round-2/S18-run-1.jsonl": "9f0aa26e82bc7ade534dc2cbaa7c3911508d2877ef605992bc54212e2cf26c31",
+    "examples/phase4/offline-final/round-2/S18-actual.json": "1d9cdb59fba899057c93a522595d6c7921dc2b587357f4f98a3fbe11a48224a5",
+    "examples/phase4/offline-final/round-3/S01-run-1.jsonl": "95b6a5fcf8f03b50bad3df66c8ed00e32d3ea7783c90e95cf3fb611640429f4d",
+    "examples/phase4/offline-final/round-3/S01-actual.json": "ec3ac631ae518704554063661bf8c5e5be6fea8645015078498753a1242b88c5",
+    "examples/phase4/offline-final/round-3/S02-run-1.jsonl": "e3610e5f9fae2351e062ee51c7baea0d202e543161dbc8590fffbc1f0f13c103",
+    "examples/phase4/offline-final/round-3/S02-actual.json": "13af2b44025a5fc3b3d128c3ced4fd2e981f69d22d25b0bac586360f2cdd8a62",
+    "examples/phase4/offline-final/round-3/S03-run-1.jsonl": "14c0588cf3c5df87412d78a5c2cf3e8985a90b7a3bf076f9f1336aedade22b24",
+    "examples/phase4/offline-final/round-3/S03-actual.json": "150b41e8d08539fc7692264115a9fff962e187c14c6bd217b9c7bbbf7574114b",
+    "examples/phase4/offline-final/round-3/S04-run-1.jsonl": "161eea5750121c64c610e0d8c49e79df362503a4f44568ad9998dbf63faaaa78",
+    "examples/phase4/offline-final/round-3/S04-actual.json": "89887cd03fc756d46b3fda3b9b94bfb56b9295cd564e09a825afcc239b2f5c03",
+    "examples/phase4/offline-final/round-3/S05-run-1.jsonl": "254a8241e03b6e303aab620b9a67d8b3314bcdd99ef826ad9a9748594f58d159",
+    "examples/phase4/offline-final/round-3/S05-actual.json": "c4edc4213455ce27cae5c14f8defad7d3c5609e1094fe3da33ba6c6cda316769",
+    "examples/phase4/offline-final/round-3/S06-run-1.jsonl": "f5132e516a6a7aad30ef2ef87856d07fbe7f240c7f6c00f55a573c4f5f3407af",
+    "examples/phase4/offline-final/round-3/S06-actual.json": "05573a19a1dfb732188627b0e5b4435c2d38be83facbcb63373a513176e4c78f",
+    "examples/phase4/offline-final/round-3/S07-run-1.jsonl": "f1dda781ad3e60e1d5bb8a7dd9d1bb3be12afe692b94de23f11074eeb9c40749",
+    "examples/phase4/offline-final/round-3/S07-actual.json": "1e8c6c07c6f6ddf43b1c8f08c7c679df9468e0a3c2e277d4fb302989e4a46623",
+    "examples/phase4/offline-final/round-3/S08-run-1.jsonl": "57fff52a258ab81de9a1b9eaa7ccf6586cb3f4e642d979981dcecb9aee6b169b",
+    "examples/phase4/offline-final/round-3/S08-actual.json": "bee7b77fa4bf93eb5776bf0186a2867cdb695b33b2cb333b0cb8d816ffea9793",
+    "examples/phase4/offline-final/round-3/S09-run-1.jsonl": "8a68a1199c9c5b57ff969c4dc6f75f7a8b8f8b43f88e0d1bfe122ad2b4eb5f57",
+    "examples/phase4/offline-final/round-3/S09-actual.json": "809c0e767b043743afc3bc244bf0d6c3b2284969fb21095792541179e074e81f",
+    "examples/phase4/offline-final/round-3/S10-run-1.jsonl": "4b992b59674ca5075cf434e8a08b1e07aeada1977797d39abb5d31d412dab3f2",
+    "examples/phase4/offline-final/round-3/S10-actual.json": "813ee39f0b273e1053718fbb2192abf2f0abdc9b6e77b21a11b7c528fd83e30a",
+    "examples/phase4/offline-final/round-3/S11-run-1.jsonl": "801271d7c27de980bbb42b642dccbb5d46e28aa6d13b49e67be22d86dd0e1b4b",
+    "examples/phase4/offline-final/round-3/S11-run-2.jsonl": "58a27375817f9bcbd23873c459699a4ff9de73d4fc7781548ccd10644c3296f3",
+    "examples/phase4/offline-final/round-3/S11-actual.json": "b717add03a34e2b3ea0eac90f36ae2727550bf182700b2ebd1a1d0d8fc4f9d9d",
+    "examples/phase4/offline-final/round-3/S12-run-1.jsonl": "d6dda69006d967525a57de2811310412cc7c6809c85135eca969a67a6a3bbdea",
+    "examples/phase4/offline-final/round-3/S12-actual.json": "481a474647576ca8174bc903197df6b302c01d52126941e14548536234ffd3f8",
+    "examples/phase4/offline-final/round-3/S13-run-1.jsonl": "7e07bd790aa6457b70b9279014bbc85306fed9e5dd345d4fa97473d5ab58620b",
+    "examples/phase4/offline-final/round-3/S13-actual.json": "509bc9a2672b3cadf48d0a5054f232ef9829e07b78a72cbc83ae889d9ab34170",
+    "examples/phase4/offline-final/round-3/S14-run-1.jsonl": "e53bcc939cb02f0a2765210d71d3083f06207242cdb577f45afd188c433522f4",
+    "examples/phase4/offline-final/round-3/S14-actual.json": "331517c12cef9c0dad688533a5f07f1069c4ac74e6700b1f737a0364bb3adf8a",
+    "examples/phase4/offline-final/round-3/S15-run-1.jsonl": "70d3bf5bc6b387661245979698c52f17f5c6bcb35807794d9377a5bfb724bb3a",
+    "examples/phase4/offline-final/round-3/S15-actual.json": "2c2a2ed0ad9817fe9207bcc6870e9266ec2ad61e40f093d14a85d162b99391cb",
+    "examples/phase4/offline-final/round-3/S16-run-1.jsonl": "1d7741976d391400dff4482006e21cf7d12e3b3e2d10b9111d3d9a46dc3a8fa4",
+    "examples/phase4/offline-final/round-3/S16-actual.json": "92ed1cc3b4938ab18dce188352e4189b92f7d31a9d1be3bda067812cc35cc41c",
+    "examples/phase4/offline-final/round-3/S17-run-1.jsonl": "80501ee3cfc980916a0839ef2b71bc83bac72c575d8259c7f128d9c3dad5ee9e",
+    "examples/phase4/offline-final/round-3/S17-actual.json": "f2c956f45ff698464a08682e50f12d93c08f1671c46ee8785bf1554ee17eede5",
+    "examples/phase4/offline-final/round-3/S18-run-1.jsonl": "9f0aa26e82bc7ade534dc2cbaa7c3911508d2877ef605992bc54212e2cf26c31",
+    "examples/phase4/offline-final/round-3/S18-actual.json": "0487dcfdd46fb9322bf2bbf1b3c4e0e81b7833104071bc78e2003dfbd278feb9"
+  },
+  "caveats": [
+    "Live evidence froze runtime and two harness files, not data or runtime_helpers. Final offline run freezes all listed data and helper files.",
+    "The two archived harness files are the exact live-evaluated version; final harness adds post-case source checks, broader hashes and earlier fault annotation. Runtime/prompt unchanged.",
+    "Provider model alias may change. Synthetic finite sample is not a production success-rate estimate.",
+    "Costs are estimates, not verified billing. No real publishing. User confirmations and recovery are harness operations."
+  ]
+}

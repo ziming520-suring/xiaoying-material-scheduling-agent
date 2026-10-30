@@ -1,0 +1,9 @@
+{"event":"run_start","max_steps":24,"model_mode":"bailian_live","notice":"offline_mock only verifies flow; bailian_live records actual provider-selected actions","task":{"items":[{"material_id":"M01","requested_time":"2026-10-28T10:00:00Z"}],"task_id":"TASK.S18"}}
+{"action":"read_material","arguments":{"material_id":"M01","view":"primary"},"event":"model_action","material_id":"M01","reason":"读取基础资料启动审核","step":1}
+{"action":"read_material","arguments":{"material_id":"M01","view":"primary"},"event":"tool_call","step":1}
+{"action":"read_material","event":"tool_result","result":{"data":null,"error":{"code":"TOOL_UNAVAILABLE","field":null,"message":"test-only read failure","retryable":true},"ok":false},"step":1}
+{"action":"read_material","arguments":{"material_id":"M01","view":"complete"},"event":"model_action","material_id":"M01","reason":"primary 读取失败，尝试 complete 补查","step":2}
+{"action":"read_material","arguments":{"material_id":"M01","view":"complete"},"event":"tool_call","step":2}
+{"action":"read_material","event":"tool_result","result":{"data":null,"error":{"code":"TOOL_UNAVAILABLE","field":null,"message":"test-only read failure","retryable":true},"ok":false},"step":2}
+{"action":"finish","arguments":{},"event":"model_action","material_id":"M01","reason":"基础资料与补充资料均不可读，无法继续审核","step":3}
+{"event":"run_result","model_calls":3,"result":{"items":[{"draft":null,"findings":[],"item_status":"incomplete","material_id":"M01","pending_items":[],"reason_codes":["TOOL_UNAVAILABLE"],"requested_time":"2026-10-28T10:00:00Z","review_status":"not_checked","save_status":"not_attempted","suggested_slot":null}],"stop_reason":null,"task_id":"TASK.S18","task_status":"incomplete"}}

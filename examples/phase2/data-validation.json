@@ -1,0 +1,53 @@
+{
+  "validation_kind": "static_fixture_consistency",
+  "status": "passed",
+  "checks": 1880,
+  "counts": {
+    "materials": 8,
+    "supplements": 2,
+    "rules": 5,
+    "slots": 4,
+    "calendars": 5,
+    "scenarios": 18
+  },
+  "acceptance_categories": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06"
+  ],
+  "business_execution_status": "not_run",
+  "model_execution_status": "not_run",
+  "file_sha256": {
+    "manifest.json": "3e784ba3354fa16336ce478b98765028a0b5bcf32c108b40057a9534d9b4b0d4",
+    "materials.json": "fe3884cce710ee834a4dabedda9fb54c00726b9e5b1645eec07522c1d0c125cf",
+    "supplements.json": "bd3206467d1197999836c1f49a382448931dac3c513cd2bf62f2e99c0781289f",
+    "rules.json": "d5ada9f9976b9f128e3c55238801ab1a9c4d901a25d86b8274290a18e0829704",
+    "slots.json": "95b6ce77fedb24fc8fd204ecde857dc1633a52d60675019adefa6f58dafa0b1a",
+    "calendars/C_EMPTY.json": "fe4cd92889f6302295546fd11cfaf53de885c34303a1a657098b5cad03dda808",
+    "calendars/C_18.json": "68ed58c39b3f6c49dcf18c105a1c2f9e668ed75e71ee6f1284f2ac192a7a9be1",
+    "calendars/C_19.json": "fd47cd7504606f2db5c1bd3de271b356026a2dba26162564d27257604f0db238",
+    "calendars/C_18_19.json": "4a7ba3a2f3d7a3b49e777fb3544151d0125b7526b78a5dddd6d79bb124fb8a49",
+    "calendars/C_FULL.json": "637501926c47f2c49fdbe0be34b9c174447264fb1771f13e3365252e27e65ae4",
+    "scenarios/S01.json": "05f32180f1480fff1e4392f692f90d9590d03f2defc037b935139b374890992a",
+    "scenarios/S02.json": "074aefcc831d188c6e114c668cc8086a5dfc49562bc4c600ae6c1a53a40ed216",
+    "scenarios/S03.json": "df66987fa1cb08b15284a251d302d3c5cc2578c717a67f077eaca7a36eb1c9a3",
+    "scenarios/S04.json": "ca7a9d9ad719ee4bc8fa56d2c0463149ad8f21c63ded4114483a1ff017b6acab",
+    "scenarios/S05.json": "eee5812f947fca6c0f733665489cb4c62c49e5a1bfd9f1f9c7a3ed1e0da82bba",
+    "scenarios/S06.json": "4cd37789785d101faf93aacd8de1dc5e1a00b0721bd0e0224d5c0626824c4ca4",
+    "scenarios/S07.json": "a660df48647b87eeb037056cbcb9791be2c7b056104f94e1dc033f247274a6d8",
+    "scenarios/S08.json": "496c358f437d545c7061d11781924137016941efaf4f336ac8977a58f24401a8",
+    "scenarios/S09.json": "b3f8b502b17ba03adae367a1a0d609f5e8a3d3ced4975b4d64e62e3c04c3b9ff",
+    "scenarios/S10.json": "4ab9c663d9232f82e951ab4f5a60f7743c4287f849e047ba92c594a49b9ba7f0",
+    "scenarios/S11.json": "3bbd020d227a8b8514c2d6efedec93594b7b2bef8c21532d02174180d3ba4ced",
+    "scenarios/S12.json": "b779565edf78e304a656a24650a4ec681d2d764005bf0043d1f5bc23d2b970af",
+    "scenarios/S13.json": "b61b5e55f4bd0d17c77de9c25b4b124c911e1a419118c240be30aed87d024475",
+    "scenarios/S14.json": "5462afc648bd5cae65ba5f71bc8ab73aec98e532300635aca65af68cb95e6641",
+    "scenarios/S15.json": "4ef1e0902c9510078f70bd2536f6cde49d65e9d04ef348cfdfdc640887b1743e",
+    "scenarios/S16.json": "e9cc2c134de0c46a62dd99fa73ad4aa5db42a974417f7ef9bd302ff82467c676",
+    "scenarios/S17.json": "e21b58ac969c706a6bd7e6d16fed265f0e05343cdeb46da671ac11f2da746fe4",
+    "scenarios/S18.json": "7a7dd03a344d22555663c0e2a7d8bf6b7bc3660172acf977b633a73e079404e9"
+  }
+}

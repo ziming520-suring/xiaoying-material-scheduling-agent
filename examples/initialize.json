@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "request_id": "init-001",
+  "operation": "system.initialize",
+  "payload": {"initial_time": "2026-10-28T17:00:00+08:00"}
+}

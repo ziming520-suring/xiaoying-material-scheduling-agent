@@ -1,0 +1,43 @@
+test_batch_failure_keeps_completed_items (test_agent.AgentTests.test_batch_failure_keeps_completed_items) ... ok
+test_cross_task_tool_args_are_rejected (test_agent.AgentTests.test_cross_task_tool_args_are_rejected) ... ok
+test_failed_final_query_does_not_claim_cached_confirmation (test_agent.AgentTests.test_failed_final_query_does_not_claim_cached_confirmation) ... FAIL
+test_final_refresh_includes_confirmation_of_an_earlier_item (test_agent.AgentTests.test_final_refresh_includes_confirmation_of_an_earlier_item) ... FAIL
+test_missing_material_and_step_limit_cannot_claim_success (test_agent.AgentTests.test_missing_material_and_step_limit_cannot_claim_success) ... ok
+test_mock_normal_and_conflict_are_observation_dependent (test_agent.AgentTests.test_mock_normal_and_conflict_are_observation_dependent) ... ok
+test_model_cannot_confirm_or_save_another_task (test_agent.AgentTests.test_model_cannot_confirm_or_save_another_task) ... ok
+test_read_failure_does_not_turn_into_passed_review (test_agent.AgentTests.test_read_failure_does_not_turn_into_passed_review) ... ok
+test_supplement_observation_causes_second_read_and_rule_check (test_agent.AgentTests.test_supplement_observation_causes_second_read_and_rule_check) ... ok
+test_trace_cannot_overwrite_previous_evidence (test_agent.AgentTests.test_trace_cannot_overwrite_previous_evidence) ... ok
+test_trace_failure_after_commit_does_not_report_save_failure (test_agent.AgentTests.test_trace_failure_after_commit_does_not_report_save_failure) ... ok
+test_trace_write_failure_before_save_has_no_business_effect (test_agent.AgentTests.test_trace_write_failure_before_save_has_no_business_effect) ... ok
+test_transient_retry_reuses_exact_request (test_agent.AgentTests.test_transient_retry_reuses_exact_request) ... ok
+test_unknown_stops_and_preserves_original_request (test_agent.AgentTests.test_unknown_stops_and_preserves_original_request) ... ok
+
+======================================================================
+FAIL: test_failed_final_query_does_not_claim_cached_confirmation (test_agent.AgentTests.test_failed_final_query_does_not_claim_cached_confirmation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 183, in test_failed_final_query_does_not_claim_cached_confirmation
+    self.assertEqual(result['task_status'],'incomplete')
+AssertionError: 'completed' != 'incomplete'
+- completed
+?         -
++ incomplete
+? ++
+
+
+======================================================================
+FAIL: test_final_refresh_includes_confirmation_of_an_earlier_item (test_agent.AgentTests.test_final_refresh_includes_confirmation_of_an_earlier_item)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 135, in test_final_refresh_includes_confirmation_of_an_earlier_item
+    self.assertEqual(result['task_status'],'completed')
+AssertionError: 'partial' != 'completed'
+- partial
++ completed
+
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.615s
+
+FAILED (failures=2)

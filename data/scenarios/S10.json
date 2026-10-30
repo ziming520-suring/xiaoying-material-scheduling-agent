@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S10",
+  "title": "保存回滚与原键恢复",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A06",
+    "A05"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S10",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "inject_fault",
+      "details": {
+        "point": "after_draft_write_before_replay_commit",
+        "effect": "rollback"
+      }
+    },
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    },
+    {
+      "action": "clear_fault",
+      "details": {}
+    },
+    {
+      "action": "repeat_saved_request",
+      "details": {
+        "instruction": "失败请求没有成功缓存，恢复后使用原键原参重试，再重复一次。"
+      }
+    },
+    {
+      "action": "read_state",
+      "details": {}
+    }
+  ],
+  "expected": {
+    "task_status": "completed",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "completed",
+        "save_status": "saved",
+        "draft_status": "confirmed",
+        "draft_count": 1,
+        "occupies_slot": true,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S18"
+        ]
+      }
+    ],
+    "assertions": [
+      "故障开启时 STORAGE_ERROR/save_status=failed，不留草稿、占位或本次成功重放。",
+      "恢复后最多成功一次；最终一份 confirmed 稿。",
+      "必须保存故障时和恢复后的两次实际输出，不能只交最终成功。"
+    ]
+  }
+}

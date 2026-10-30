@@ -1,0 +1,36 @@
+test_failed_model_attempt_keeps_actual_output_and_trace (test_phase4.Phase4Tests.test_failed_model_attempt_keeps_actual_output_and_trace) ... ok
+test_fault_description_survives_early_model_failure (test_phase4.Phase4Tests.test_fault_description_survives_early_model_failure) ... 
+  test_fault_description_survives_early_model_failure (test_phase4.Phase4Tests.test_fault_description_survives_early_model_failure) (scenario='S17') ... FAIL
+{"round": 1, "scenario_id": "S01", "passed": true, "initial_statuses": ["completed"], "model_errors": []}
+test_final_case_source_change_cannot_report_success (test_phase4.Phase4Tests.test_final_case_source_change_cannot_report_success) ... FAIL
+test_fingerprints_include_fixture_content_and_runtime_helper (test_phase4.Phase4Tests.test_fingerprints_include_fixture_content_and_runtime_helper) ... FAIL
+test_offline_scenario_is_marked_offline_and_successful (test_phase4.Phase4Tests.test_offline_scenario_is_marked_offline_and_successful) ... ok
+
+======================================================================
+FAIL: test_fault_description_survives_early_model_failure (test_phase4.Phase4Tests.test_fault_description_survives_early_model_failure) (scenario='S17')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_phase4.py", line 48, in test_fault_description_survives_early_model_failure
+    self.assertTrue(evidence['fault_injection'])
+AssertionError: None is not true
+
+======================================================================
+FAIL: test_final_case_source_change_cannot_report_success (test_phase4.Phase4Tests.test_final_case_source_change_cannot_report_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_phase4.py", line 27, in test_final_case_source_change_cannot_report_success
+    self.assertEqual(phase4_evaluate.main(),2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_fingerprints_include_fixture_content_and_runtime_helper (test_phase4.Phase4Tests.test_fingerprints_include_fixture_content_and_runtime_helper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_phase4.py", line 35, in test_fingerprints_include_fixture_content_and_runtime_helper
+    self.assertIn(path.relative_to(phase4_evaluate.ROOT).as_posix(),hashes)
+AssertionError: 'data/manifest.json' not found in {'src/schedule_agent/__init__.py': '2a9af73f7f89d271acad72a7ea8b47fa3415526bcf9df97e630a69a449b0ef83', 'src/schedule_agent/__main__.py': 'e775eed6a3c91ec66e62c5d9ec0134b03e60fe490da933ad37ae03a287eb78aa', 'src/schedule_agent/agent.py': 'e13d79352d90da29d0f360febf790fa02a6ecac63f1df9e4b9735c80e29cae83', 'src/schedule_agent/bailian.py': '8eefe28ecd594fa02da17690be5b1d13e63827cec3e77fd9d17cd7e83231b062', 'src/schedule_agent/budget.py': '5a08dd925fda35605a8e60f75bdaef52fb709cd48bd98b98e83061b447587374', 'src/schedule_agent/business.py': '65a2c94550dc628a13540e16670cf9d17c3a6fdf93d792e16f86195c58cf8244', 'src/schedule_agent/business_schema.py': 'd3b2beb3dd63448eba1e657a6d7e64990187976e55ffc5c13c6371a572ed52d0', 'src/schedule_agent/business_validation.py': '91a8774dbc81270d2fa1371cc13f6f5dfd2d44bd3b04620eb54bed6c9ec41bd9', 'src/schedule_agent/contracts.py': 'b31a2c9bd58b8890899c83d620f440f9e9a6c9991952bc506adea590f67664c6', 'src/schedule_agent/draft_tools.py': 'f7c4bae5b5751a81d7cd27196644952798cdbe13b67edb27b0fd8fcf6f36f660', 'src/schedule_agent/material_tools.py': 'c13dc69ccf90ca542a22183c5031335a33a48353debd1d3ff5bbbaf8cf2a06eb', 'src/schedule_agent/model.py': '8d46b265fd0fb8f4037655778a7c781d9b17fdb80ff2db70767e861221218343', 'src/schedule_agent/runtime.py': '3006bccb00fd6a2472d2624cdf6bb0f7c58d9c5e2853ed3ef8e9fc95385b1417', 'src/schedule_agent/storage.py': '45577a0aa078cb5c69de2e1d098a725bcfca9057901bf8115fb5b6c6536eb953', 'tests/phase4_evaluate.py': '549b0618219bf096c6156df378b8fc8520d7e64afbb272826a075ad2987d5886', 'tests/record_business_evidence.py': 'a91979468cdf04963cc1838892573299619e6320f6098f28976aba6945550d4b'}
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.567s
+
+FAILED (failures=3)

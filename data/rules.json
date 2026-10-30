@@ -1,0 +1,53 @@
+[
+  {
+    "rule_id": "R001",
+    "version": 1,
+    "kind": "required_fields",
+    "severity": "missing",
+    "fields": [
+      "title",
+      "caption",
+      "rights_status"
+    ],
+    "terms": [],
+    "reason": "测试规则：标题、文案和明确授权信息必须齐备。"
+  },
+  {
+    "rule_id": "R002",
+    "version": 1,
+    "kind": "denied_rights",
+    "severity": "block",
+    "fields": [],
+    "terms": [],
+    "reason": "测试规则：明确未授权的素材禁止排期。"
+  },
+  {
+    "rule_id": "R003",
+    "version": 1,
+    "kind": "banned_terms",
+    "severity": "block",
+    "fields": [],
+    "terms": [
+      "保证收益"
+    ],
+    "reason": "测试品牌规则：文案不得包含测试禁用表述。"
+  },
+  {
+    "rule_id": "R004",
+    "version": 1,
+    "kind": "manual_review",
+    "severity": "confirm",
+    "fields": [],
+    "terms": [],
+    "reason": "测试规则：人工复核标记须由用户明确确认。"
+  },
+  {
+    "rule_id": "R005",
+    "version": 1,
+    "kind": "source_conflict",
+    "severity": "block",
+    "fields": [],
+    "terms": [],
+    "reason": "测试规则：资料来源矛盾时必须先核实。"
+  }
+]

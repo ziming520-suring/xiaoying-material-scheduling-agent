@@ -1,0 +1,237 @@
+{
+  "mode": "TEST FIXTURES ONLY; no production expiry rule",
+  "fixture": [
+    {
+      "id": "A",
+      "due_at": "2026-10-28T10:00:00Z"
+    },
+    {
+      "id": "B",
+      "due_at": "2026-10-28T11:00:00Z"
+    }
+  ],
+  "steps": [
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "payload": {
+          "initial_time": "2026-10-28T09:00:00Z"
+        }
+      },
+      "output": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "status": "succeeded",
+        "data": {
+          "current_time": "2026-10-28T09:00:00Z",
+          "clock_version": 1
+        },
+        "error": null
+      },
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "system.initialize",
+          "request_id": "init"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "system.initialize",
+          "request_id": "init"
+        },
+        {
+          "event": "committed",
+          "operation": "system.initialize",
+          "request_id": "init",
+          "result": {
+            "clock_version": 1,
+            "current_time": "2026-10-28T09:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "before",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T09:59:59Z"
+        }
+      },
+      "output": {
+        "schema_version": 1,
+        "request_id": "before",
+        "operation": "clock.advance",
+        "status": "succeeded",
+        "data": {
+          "previous_time": "2026-10-28T09:00:00Z",
+          "current_time": "2026-10-28T09:59:59Z",
+          "clock_version": 2,
+          "settled_count": 0
+        },
+        "error": null
+      },
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "before"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "clock.advance",
+          "request_id": "before"
+        },
+        {
+          "event": "committed",
+          "operation": "clock.advance",
+          "request_id": "before",
+          "result": {
+            "clock_version": 2,
+            "current_time": "2026-10-28T09:59:59Z",
+            "previous_time": "2026-10-28T09:00:00Z",
+            "settled_count": 0
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "advance-1",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T10:00:00Z"
+        }
+      },
+      "output": {
+        "schema_version": 1,
+        "request_id": "advance-1",
+        "operation": "clock.advance",
+        "status": "succeeded",
+        "data": {
+          "previous_time": "2026-10-28T09:59:59Z",
+          "current_time": "2026-10-28T10:00:00Z",
+          "clock_version": 3,
+          "settled_count": 1
+        },
+        "error": null
+      },
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        },
+        {
+          "event": "committed",
+          "operation": "clock.advance",
+          "request_id": "advance-1",
+          "result": {
+            "clock_version": 3,
+            "current_time": "2026-10-28T10:00:00Z",
+            "previous_time": "2026-10-28T09:59:59Z",
+            "settled_count": 1
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "later",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T11:00:00Z"
+        }
+      },
+      "output": {
+        "schema_version": 1,
+        "request_id": "later",
+        "operation": "clock.advance",
+        "status": "failed",
+        "data": null,
+        "error": {
+          "code": "SETTLEMENT_FAILED",
+          "message": "Due processing failed; the transaction will be rolled back.",
+          "field": null,
+          "retryable": true
+        }
+      },
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "later"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "clock.advance",
+          "request_id": "later"
+        },
+        {
+          "code": "SETTLEMENT_FAILED",
+          "event": "rejected_or_rolled_back",
+          "operation": "clock.advance",
+          "request_id": "later"
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "later",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T11:00:00Z"
+        }
+      },
+      "output": {
+        "schema_version": 1,
+        "request_id": "later",
+        "operation": "clock.advance",
+        "status": "succeeded",
+        "data": {
+          "previous_time": "2026-10-28T10:00:00Z",
+          "current_time": "2026-10-28T11:00:00Z",
+          "clock_version": 4,
+          "settled_count": 1
+        },
+        "error": null
+      },
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "later"
+        },
+        {
+          "event": "preconditions_passed",
+          "operation": "clock.advance",
+          "request_id": "later"
+        },
+        {
+          "event": "committed",
+          "operation": "clock.advance",
+          "request_id": "later",
+          "result": {
+            "clock_version": 4,
+            "current_time": "2026-10-28T11:00:00Z",
+            "previous_time": "2026-10-28T10:00:00Z",
+            "settled_count": 1
+          }
+        }
+      ]
+    }
+  ],
+  "state_unchanged_on_failure": true
+}

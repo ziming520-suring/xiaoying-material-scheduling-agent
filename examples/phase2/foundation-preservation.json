@@ -1,0 +1,14 @@
+{
+  "comparison": "byte-for-byte against foundation checkpoint",
+  "status": "unchanged",
+  "files": [
+    "project1/src/schedule_agent/contracts.py",
+    "project1/src/schedule_agent/runtime.py",
+    "project1/src/schedule_agent/storage.py",
+    "project1/src/schedule_agent/__init__.py",
+    "project1/src/schedule_agent/__main__.py",
+    "project1/tests/test_cli.py",
+    "project1/tests/test_runtime.py",
+    "project1/tests/test_validation.py"
+  ]
+}

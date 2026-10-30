@@ -1,0 +1,6 @@
+{"event":"run_start","max_steps":24,"model_mode":"offline_mock","notice":"offline_mock only verifies flow; it does not prove real model decisions","task":{"items":[{"material_id":"M01","requested_time":"2026-10-28T10:00:00Z"}],"task_id":"TASK.S18"}}
+{"action":"read_material","arguments":{"material_id":"M01","view":"primary"},"event":"model_action","material_id":"M01","reason":"先读取有来源的基础资料。","step":1}
+{"action":"read_material","arguments":{"material_id":"M01","view":"primary"},"event":"tool_call","step":1}
+{"action":"read_material","event":"tool_result","result":{"data":null,"error":{"code":"TOOL_UNAVAILABLE","field":null,"message":"test-only read failure","retryable":true},"ok":false},"step":1}
+{"action":"finish","arguments":{},"event":"model_action","material_id":"M01","reason":"工具没有成功，保留错误并停止本项。","step":2}
+{"event":"run_result","model_calls":2,"result":{"items":[{"draft":null,"findings":[],"item_status":"incomplete","material_id":"M01","pending_items":[],"reason_codes":["TOOL_UNAVAILABLE"],"requested_time":"2026-10-28T10:00:00Z","review_status":"not_checked","save_status":"not_attempted","suggested_slot":null}],"stop_reason":null,"task_id":"TASK.S18","task_status":"incomplete"}}

@@ -1,0 +1,226 @@
+{
+  "scenario_id": "S03",
+  "execution_status": "completed",
+  "model_mode": "offline_mock",
+  "evidence_kind": "actual_local_tools_with_offline_mock",
+  "real_model_executed": false,
+  "input": {
+    "task_id": "TASK.S03",
+    "items": [
+      {
+        "material_id": "M03",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "calendar_id": "C_EMPTY",
+  "fault_injection": null,
+  "agent_runs": [
+    {
+      "task_id": "TASK.S03",
+      "task_status": "incomplete",
+      "items": [
+        {
+          "material_id": "M03",
+          "requested_time": "2026-10-28T10:00:00Z",
+          "review_status": "needs_information",
+          "findings": [
+            {
+              "rule_id": "R001",
+              "severity": "missing",
+              "field": "caption",
+              "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+              "source_ids": [],
+              "evidence": []
+            },
+            {
+              "rule_id": "R001",
+              "severity": "missing",
+              "field": "rights_status",
+              "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+              "source_ids": [],
+              "evidence": []
+            }
+          ],
+          "suggested_slot": null,
+          "pending_items": [
+            {
+              "kind": "missing_information",
+              "field": "caption",
+              "risk_id": null,
+              "message": "请补充 caption"
+            },
+            {
+              "kind": "missing_information",
+              "field": "rights_status",
+              "risk_id": null,
+              "message": "请补充 rights_status"
+            }
+          ],
+          "draft": null,
+          "save_status": "not_attempted",
+          "item_status": "needs_information",
+          "reason_codes": [
+            "MATERIAL_INCOMPLETE"
+          ]
+        }
+      ],
+      "stop_reason": null
+    }
+  ],
+  "explicit_operations": [
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "payload": {
+          "initial_time": "2026-10-28T09:00:00Z"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "status": "succeeded",
+        "data": {
+          "current_time": "2026-10-28T09:00:00Z",
+          "clock_version": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "upgrade",
+        "operation": "schema.upgrade",
+        "payload": {
+          "target_storage_version": 2
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "upgrade",
+        "operation": "schema.upgrade",
+        "status": "succeeded",
+        "data": {
+          "previous_storage_version": 1,
+          "storage_schema_version": 2
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "load",
+        "operation": "fixture.load",
+        "payload": {
+          "dataset_id": "synthetic-campus-v1",
+          "manifest_sha256": "3e784ba3354fa16336ce478b98765028a0b5bcf32c108b40057a9534d9b4b0d4",
+          "calendar_id": "C_EMPTY"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "load",
+        "operation": "fixture.load",
+        "status": "succeeded",
+        "data": {
+          "dataset_id": "synthetic-campus-v1",
+          "calendar_id": "C_EMPTY",
+          "calendar_revision": 1,
+          "occupancy_version": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "task",
+        "operation": "task.create",
+        "payload": {
+          "task_id": "TASK.S03",
+          "items": [
+            {
+              "material_id": "M03",
+              "requested_time": "2026-10-28T18:00:00+08:00"
+            }
+          ]
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "task",
+        "operation": "task.create",
+        "status": "succeeded",
+        "data": {
+          "task": {
+            "items": [
+              {
+                "material_id": "M03",
+                "requested_time": "2026-10-28T10:00:00Z"
+              }
+            ],
+            "task_id": "TASK.S03"
+          }
+        },
+        "error": null
+      }
+    }
+  ],
+  "final_drafts": [],
+  "final_clock": {
+    "schema_version": 1,
+    "request_id": null,
+    "operation": "clock.read",
+    "status": "succeeded",
+    "data": {
+      "current_time": "2026-10-28T09:00:00Z",
+      "clock_version": 1
+    },
+    "error": null
+  },
+  "verified_assertions": [
+    "Final per-material draft count, status, allowed slot and occupancy match scenario projection."
+  ],
+  "trace_files": [
+    "S03-run-1.jsonl"
+  ],
+  "note": "Operations after agent_runs are separate real user/test calls; do not mistake an earlier run result for the final state.",
+  "phase4_verdict": {
+    "scenario_id": "S03",
+    "round": 2,
+    "passed": true,
+    "checks": {
+      "contract_assertions": true,
+      "initial_status_matches": true,
+      "no_model_errors": true
+    },
+    "real_model_executed": false,
+    "model_mode": "offline_mock",
+    "error_type": null,
+    "initial_statuses": [
+      "needs_information"
+    ],
+    "model_errors": [],
+    "elapsed_seconds": 0.094,
+    "actual_file": "round-2/S03-actual.json",
+    "traces": [
+      {
+        "file": "S03-run-1.jsonl",
+        "actions": [
+          "read_material",
+          "check_rules",
+          "finish"
+        ]
+      }
+    ]
+  }
+}

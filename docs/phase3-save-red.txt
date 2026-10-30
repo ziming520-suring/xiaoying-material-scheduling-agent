@@ -1,0 +1,142 @@
+test_blocked_missing_and_forged_refs_never_save (test_business.BusinessTests.test_blocked_missing_and_forged_refs_never_save) ... FAIL
+test_confirmation_race_and_new_key_pending_recheck (test_business.BusinessTests.test_confirmation_race_and_new_key_pending_recheck) ... FAIL
+test_failed_save_rolls_back_draft_occupancy_and_replay (test_business.BusinessTests.test_failed_save_rolls_back_draft_occupancy_and_replay) ... FAIL
+test_historical_snapshot_survives_current_material_change (test_business.BusinessTests.test_historical_snapshot_survives_current_material_change) ... FAIL
+test_invalid_business_payload_leaves_database_unchanged (test_business.BusinessTests.test_invalid_business_payload_leaves_database_unchanged) ... ok
+test_load_replay_and_reject_second_load (test_business.BusinessTests.test_load_replay_and_reject_second_load) ... ok
+test_migration_rollback_is_atomic (test_business.BusinessTests.test_migration_rollback_is_atomic) ... ok
+test_normal_save_replay_business_uniqueness_and_snapshot (test_business.BusinessTests.test_normal_save_replay_business_uniqueness_and_snapshot) ... FAIL
+test_risk_and_conflict_pending_then_exact_confirmation (test_business.BusinessTests.test_risk_and_conflict_pending_then_exact_confirmation) ... FAIL
+test_risk_precedence_and_conflicts_in_both_views (test_business.BusinessTests.test_risk_precedence_and_conflicts_in_both_views) ... ok
+test_slot_query_and_hard_time_task_identity (test_business.BusinessTests.test_slot_query_and_hard_time_task_identity) ... ok
+test_supplement_recheck_and_unresolvable_missing (test_business.BusinessTests.test_supplement_recheck_and_unresolvable_missing) ... ok
+test_time_advance_keeps_pending_but_expired_confirmation_rejected (test_business.BusinessTests.test_time_advance_keeps_pending_but_expired_confirmation_rejected) ... FAIL
+test_two_processes_cannot_claim_same_slot (test_business.BusinessTests.test_two_processes_cannot_claim_same_slot) ... FAIL
+test_unknown_after_commit_recovers_with_original_key (test_business.BusinessTests.test_unknown_after_commit_recovers_with_original_key) ... FAIL
+test_update_pending_invalidates_old_version_and_restores_original (test_business.BusinessTests.test_update_pending_invalidates_old_version_and_restores_original) ... FAIL
+test_upgrade_retains_clock_and_original_replay (test_business.BusinessTests.test_upgrade_retains_clock_and_original_replay) ... ok
+
+======================================================================
+FAIL: test_blocked_missing_and_forged_refs_never_save (test_business.BusinessTests.test_blocked_missing_and_forged_refs_never_save)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 114, in test_blocked_missing_and_forged_refs_never_save
+    self.assertEqual(self.save(mid,task=mid,key=mid)['error']['code'],code)
+AssertionError: 'UNKNOWN_OPERATION' != 'MATERIAL_INCOMPLETE'
+- UNKNOWN_OPERATION
++ MATERIAL_INCOMPLETE
+
+
+======================================================================
+FAIL: test_confirmation_race_and_new_key_pending_recheck (test_business.BusinessTests.test_confirmation_race_and_new_key_pending_recheck)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 90, in test_confirmation_race_and_new_key_pending_recheck
+    saved=self.write('draft.save',p,'save'); self.assertEqual(saved['status'],'succeeded',saved)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+======================================================================
+FAIL: test_failed_save_rolls_back_draft_occupancy_and_replay (test_business.BusinessTests.test_failed_save_rolls_back_draft_occupancy_and_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 126, in test_failed_save_rolls_back_draft_occupancy_and_replay
+    self.assertEqual(self.write('draft.save',p,'save')['error']['code'],'STORAGE_ERROR')
+AssertionError: 'UNKNOWN_OPERATION' != 'STORAGE_ERROR'
+- UNKNOWN_OPERATION
++ STORAGE_ERROR
+
+
+======================================================================
+FAIL: test_historical_snapshot_survives_current_material_change (test_business.BusinessTests.test_historical_snapshot_survives_current_material_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 157, in test_historical_snapshot_survives_current_material_change
+    self.ready(); self.task(); saved=self.save(); self.assertEqual(saved['status'],'succeeded',saved)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+======================================================================
+FAIL: test_normal_save_replay_business_uniqueness_and_snapshot (test_business.BusinessTests.test_normal_save_replay_business_uniqueness_and_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 63, in test_normal_save_replay_business_uniqueness_and_snapshot
+    first=self.write('draft.save',p,'save'); self.assertEqual(first['status'],'succeeded',first)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+======================================================================
+FAIL: test_risk_and_conflict_pending_then_exact_confirmation (test_business.BusinessTests.test_risk_and_conflict_pending_then_exact_confirmation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 74, in test_risk_and_conflict_pending_then_exact_confirmation
+    saved=self.save('M05',slot='S19'); self.assertEqual(saved['status'],'succeeded',saved)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+======================================================================
+FAIL: test_time_advance_keeps_pending_but_expired_confirmation_rejected (test_business.BusinessTests.test_time_advance_keeps_pending_but_expired_confirmation_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 149, in test_time_advance_keeps_pending_but_expired_confirmation_rejected
+    self.ready('C_18'); self.task(); saved=self.save(slot='S19'); self.assertEqual(saved['status'],'succeeded',saved)
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+======================================================================
+FAIL: test_two_processes_cannot_claim_same_slot (test_business.BusinessTests.test_two_processes_cannot_claim_same_slot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 175, in test_two_processes_cannot_claim_same_slot
+    self.assertEqual(sorted(r['status'] for r in results),['failed','succeeded'])
+AssertionError: Lists differ: ['failed', 'failed'] != ['failed', 'succeeded']
+
+First differing element 1:
+'failed'
+'succeeded'
+
+- ['failed', 'failed']
++ ['failed', 'succeeded']
+
+======================================================================
+FAIL: test_unknown_after_commit_recovers_with_original_key (test_business.BusinessTests.test_unknown_after_commit_recovers_with_original_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 137, in test_unknown_after_commit_recovers_with_original_key
+    self.assertEqual(result['status'],'unknown',result)
+AssertionError: 'failed' != 'unknown'
+- failed
++ unknown
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+======================================================================
+FAIL: test_update_pending_invalidates_old_version_and_restores_original (test_business.BusinessTests.test_update_pending_invalidates_old_version_and_restores_original)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 101, in test_update_pending_invalidates_old_version_and_restores_original
+    self.assertEqual(a['status'],'succeeded',a); d=a['data']['draft']
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'save', 'operation': 'draft.save', 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Business operation is not implemented.', 'field': None, 'retryable': False}}
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.570s
+
+FAILED (failures=10)

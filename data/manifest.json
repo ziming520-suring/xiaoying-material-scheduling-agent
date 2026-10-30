@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-campus-v1",
+  "synthetic": true,
+  "initial_time": "2026-10-28T09:00:00Z",
+  "business_utc_offset": "+08:00",
+  "files": {
+    "materials": "materials.json",
+    "supplements": "supplements.json",
+    "rules": "rules.json",
+    "slots": "slots.json"
+  },
+  "calendars": [
+    "calendars/C_EMPTY.json",
+    "calendars/C_18.json",
+    "calendars/C_19.json",
+    "calendars/C_18_19.json",
+    "calendars/C_FULL.json"
+  ],
+  "scenarios": [
+    "scenarios/S01.json",
+    "scenarios/S02.json",
+    "scenarios/S03.json",
+    "scenarios/S04.json",
+    "scenarios/S05.json",
+    "scenarios/S06.json",
+    "scenarios/S07.json",
+    "scenarios/S08.json",
+    "scenarios/S09.json",
+    "scenarios/S10.json",
+    "scenarios/S11.json",
+    "scenarios/S12.json",
+    "scenarios/S13.json",
+    "scenarios/S14.json",
+    "scenarios/S15.json",
+    "scenarios/S16.json",
+    "scenarios/S17.json",
+    "scenarios/S18.json"
+  ]
+}

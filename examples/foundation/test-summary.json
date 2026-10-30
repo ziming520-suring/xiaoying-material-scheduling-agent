@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "tests_run": 42,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 8.111,
+  "successful": true,
+  "scope": "foundation only, no model decisions"
+}

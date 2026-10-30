@@ -1,0 +1,89 @@
+test_engine_exists (test_agent.AgentTests.test_engine_exists) ... FAIL
+test_missing_material_and_step_limit_cannot_claim_success (test_agent.AgentTests.test_missing_material_and_step_limit_cannot_claim_success) ... ERROR
+test_mock_normal_and_conflict_are_observation_dependent (test_agent.AgentTests.test_mock_normal_and_conflict_are_observation_dependent) ... ERROR
+test_model_cannot_confirm_or_save_another_task (test_agent.AgentTests.test_model_cannot_confirm_or_save_another_task) ... ERROR
+test_read_failure_does_not_turn_into_passed_review (test_agent.AgentTests.test_read_failure_does_not_turn_into_passed_review) ... ERROR
+test_supplement_observation_causes_second_read_and_rule_check (test_agent.AgentTests.test_supplement_observation_causes_second_read_and_rule_check) ... ERROR
+test_trace_cannot_overwrite_previous_evidence (test_agent.AgentTests.test_trace_cannot_overwrite_previous_evidence) ... ERROR
+test_unknown_stops_and_preserves_original_request (test_agent.AgentTests.test_unknown_stops_and_preserves_original_request) ... ERROR
+
+======================================================================
+ERROR: test_missing_material_and_step_limit_cannot_claim_success (test_agent.AgentTests.test_missing_material_and_step_limit_cannot_claim_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 39, in test_missing_material_and_step_limit_cannot_claim_success
+    result=self.run_agent(mid='M03',max_steps=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 14, in run_agent
+    import schedule_agent.agent as agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+ERROR: test_mock_normal_and_conflict_are_observation_dependent (test_agent.AgentTests.test_mock_normal_and_conflict_are_observation_dependent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 23, in test_mock_normal_and_conflict_are_observation_dependent
+    result=self.run_agent(cal='C_18')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 14, in run_agent
+    import schedule_agent.agent as agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+ERROR: test_model_cannot_confirm_or_save_another_task (test_agent.AgentTests.test_model_cannot_confirm_or_save_another_task)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 49, in test_model_cannot_confirm_or_save_another_task
+    result=self.run_agent(model=Rogue())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 14, in run_agent
+    import schedule_agent.agent as agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+ERROR: test_read_failure_does_not_turn_into_passed_review (test_agent.AgentTests.test_read_failure_does_not_turn_into_passed_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 56, in test_read_failure_does_not_turn_into_passed_review
+    import schedule_agent.agent as agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+ERROR: test_supplement_observation_causes_second_read_and_rule_check (test_agent.AgentTests.test_supplement_observation_causes_second_read_and_rule_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 32, in test_supplement_observation_causes_second_read_and_rule_check
+    result=self.run_agent(mid='M02'); self.assertEqual(result['task_status'],'completed')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 14, in run_agent
+    import schedule_agent.agent as agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+ERROR: test_trace_cannot_overwrite_previous_evidence (test_agent.AgentTests.test_trace_cannot_overwrite_previous_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 81, in test_trace_cannot_overwrite_previous_evidence
+    from schedule_agent.agent import run_agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+ERROR: test_unknown_stops_and_preserves_original_request (test_agent.AgentTests.test_unknown_stops_and_preserves_original_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 65, in test_unknown_stops_and_preserves_original_request
+    import schedule_agent.agent as agent
+ModuleNotFoundError: No module named 'schedule_agent.agent'
+
+======================================================================
+FAIL: test_engine_exists (test_agent.AgentTests.test_engine_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 20, in test_engine_exists
+    self.assertIsNotNone(importlib.util.find_spec('schedule_agent.agent'),'Agent loop not implemented')
+AssertionError: unexpectedly None : Agent loop not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.471s
+
+FAILED (failures=1, errors=7)

@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-29T10:36:33.507635+00:00",
+  "finished_at": "2026-10-29T10:37:00.795706+00:00",
+  "input_files": 530,
+  "test_exit_code": 0,
+  "tests": 107,
+  "demo_exit_code": 2,
+  "expected_demo_exit_code": 2,
+  "demo_model": "offline_mock",
+  "live_calls": 0,
+  "runtime_matches_phase4_live": true,
+  "environment": "Windows; Python 3.12.14; no third-party dependency install",
+  "commands": [
+    "python -X utf8 -m unittest discover -s tests -v",
+    "python -X utf8 run_demo.py"
+  ],
+  "note": "Copied only staged files to a fresh directory, removed DASHSCOPE_API_KEY and PYTHONPATH from child environment. Test paths normalized for public logs. Did not copy or reset private budget database."
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "material_id": "M01",
+    "version": 1,
+    "source_id": "BASE.M01",
+    "title": "合成字幕演示",
+    "caption": "测试素材：演示字幕编辑功能。",
+    "rights_status": "authorized",
+    "manual_review_required": false
+  },
+  {
+    "material_id": "M02",
+    "version": 1,
+    "source_id": "BASE.M02",
+    "title": "合成剪辑演示",
+    "caption": "测试素材：展示时间线剪辑。",
+    "rights_status": "unknown",
+    "manual_review_required": false
+  },
+  {
+    "material_id": "M03",
+    "version": 1,
+    "source_id": "BASE.M03",
+    "title": "待补充素材",
+    "caption": null,
+    "rights_status": "unknown",
+    "manual_review_required": false
+  },
+  {
+    "material_id": "M04",
+    "version": 1,
+    "source_id": "BASE.M04",
+    "title": "阻断样例",
+    "caption": "测试用禁用表述：保证收益。",
+    "rights_status": "denied",
+    "manual_review_required": false
+  },
+  {
+    "material_id": "M05",
+    "version": 1,
+    "source_id": "BASE.M05",
+    "title": "人工复核样例",
+    "caption": "测试素材：包含须由团队复核的品牌措辞。",
+    "rights_status": "authorized",
+    "manual_review_required": true
+  },
+  {
+    "material_id": "M06",
+    "version": 1,
+    "source_id": "BASE.M06",
+    "title": "来源冲突样例",
+    "caption": "测试素材：授权来源存在矛盾。",
+    "rights_status": "authorized",
+    "manual_review_required": false
+  },
+  {
+    "material_id": "M07",
+    "version": 1,
+    "source_id": "BASE.M07",
+    "title": null,
+    "caption": "测试用禁用表述：保证收益。",
+    "rights_status": "unknown",
+    "manual_review_required": true
+  },
+  {
+    "material_id": "M08",
+    "version": 1,
+    "source_id": "BASE.M08",
+    "title": "第二项正常素材",
+    "caption": "测试素材：介绍字幕颜色设置。",
+    "rights_status": "authorized",
+    "manual_review_required": false
+  }
+]

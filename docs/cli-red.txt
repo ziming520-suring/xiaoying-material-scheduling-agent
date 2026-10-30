@@ -1,0 +1,165 @@
+test_cli_conflict_and_reversal_are_exit_two (test_cli.CliTests.test_cli_conflict_and_reversal_are_exit_two) ... FAIL
+test_cli_init_advance_replay_and_read (test_cli.CliTests.test_cli_init_advance_replay_and_read) ... FAIL
+test_cli_invalid_json_returns_exit_two_and_no_database (test_cli.CliTests.test_cli_invalid_json_returns_exit_two_and_no_database) ... FAIL
+test_cli_invalid_utf8_returns_error (test_cli.CliTests.test_cli_invalid_utf8_returns_error) ... FAIL
+test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) ... 
+  test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('run', '--db', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\含 空格#数据库.sqlite3', '--input', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\request.json')) ... FAIL
+  test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('run', '--db', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\含 空格#数据库.sqlite3')) ... FAIL
+  test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=()) ... FAIL
+  test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('publish',)) ... FAIL
+  test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('clock', '--db', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\含 空格#数据库.sqlite3', '--extra', 'x')) ... FAIL
+test_cli_query_does_not_initialize_or_change_database (test_cli.CliTests.test_cli_query_does_not_initialize_or_change_database) ... FAIL
+test_cli_storage_failure_exit_three (test_cli.CliTests.test_cli_storage_failure_exit_three) ... FAIL
+
+======================================================================
+FAIL: test_cli_conflict_and_reversal_are_exit_two (test_cli.CliTests.test_cli_conflict_and_reversal_are_exit_two)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 94, in test_cli_conflict_and_reversal_are_exit_two
+    self.initialize()
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 36, in initialize
+    result, body = self.write(raw("system.initialize", "init", "2026-10-28T09:00:00Z"))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 33, in write
+    return self.call("run", "--db", str(self.db), "--input", str(self.input))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_init_advance_replay_and_read (test_cli.CliTests.test_cli_init_advance_replay_and_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 41, in test_cli_init_advance_replay_and_read
+    self.initialize()
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 36, in initialize
+    result, body = self.write(raw("system.initialize", "init", "2026-10-28T09:00:00Z"))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 33, in write
+    return self.call("run", "--db", str(self.db), "--input", str(self.input))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_invalid_json_returns_exit_two_and_no_database (test_cli.CliTests.test_cli_invalid_json_returns_exit_two_and_no_database)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 54, in test_cli_invalid_json_returns_exit_two_and_no_database
+    result, body = self.write('{"schema_version":false}')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 33, in write
+    return self.call("run", "--db", str(self.db), "--input", str(self.input))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_invalid_utf8_returns_error (test_cli.CliTests.test_cli_invalid_utf8_returns_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 61, in test_cli_invalid_utf8_returns_error
+    result, body = self.call("run", "--db", str(self.db), "--input", str(self.input))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('run', '--db', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\含 空格#数据库.sqlite3', '--input', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\request.json'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 71, in test_cli_missing_file_and_parameters_are_json_errors
+    result, body = self.call(*args)
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('run', '--db', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\含 空格#数据库.sqlite3'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 71, in test_cli_missing_file_and_parameters_are_json_errors
+    result, body = self.call(*args)
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=())
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 71, in test_cli_missing_file_and_parameters_are_json_errors
+    result, body = self.call(*args)
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('publish',))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 71, in test_cli_missing_file_and_parameters_are_json_errors
+    result, body = self.call(*args)
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_missing_file_and_parameters_are_json_errors (test_cli.CliTests.test_cli_missing_file_and_parameters_are_json_errors) (args=('clock', '--db', 'C:\\Users\\余淼\\AppData\\Local\\Temp\\tmpr4h88y49\\含 空格#数据库.sqlite3', '--extra', 'x'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 71, in test_cli_missing_file_and_parameters_are_json_errors
+    result, body = self.call(*args)
+                   ^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_query_does_not_initialize_or_change_database (test_cli.CliTests.test_cli_query_does_not_initialize_or_change_database)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 84, in test_cli_query_does_not_initialize_or_change_database
+    result, body = self.call("clock", "--db", str(self.db))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_cli_storage_failure_exit_three (test_cli.CliTests.test_cli_storage_failure_exit_three)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 78, in test_cli_storage_failure_exit_three
+    result, body = self.write(raw("system.initialize", "init"))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 33, in write
+    return self.call("run", "--db", str(self.db), "--input", str(self.input))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_cli.py", line 26, in call
+    self.assertTrue(result.stdout.strip().startswith("{"), result.stderr or result.stdout)
+AssertionError: False is not true : C:\Users\余淼\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe: No module named schedule_agent.__main__; 'schedule_agent' is a package and cannot be directly executed
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.753s
+
+FAILED (failures=11)

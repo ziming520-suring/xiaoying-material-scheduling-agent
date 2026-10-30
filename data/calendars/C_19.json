@@ -1,0 +1,10 @@
+{
+  "calendar_id": "C_19",
+  "revision": 1,
+  "existing": [
+    {
+      "schedule_id": "EX.S19",
+      "slot_id": "S19"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+test_invalid_business_payload_leaves_database_unchanged (test_business.BusinessTests.test_invalid_business_payload_leaves_database_unchanged) ... FAIL
+test_load_replay_and_reject_second_load (test_business.BusinessTests.test_load_replay_and_reject_second_load) ... FAIL
+test_risk_precedence_and_conflicts_in_both_views (test_business.BusinessTests.test_risk_precedence_and_conflicts_in_both_views) ... FAIL
+test_slot_query_and_hard_time_task_identity (test_business.BusinessTests.test_slot_query_and_hard_time_task_identity) ... FAIL
+test_supplement_recheck_and_unresolvable_missing (test_business.BusinessTests.test_supplement_recheck_and_unresolvable_missing) ... FAIL
+test_upgrade_retains_clock_and_original_replay (test_business.BusinessTests.test_upgrade_retains_clock_and_original_replay) ... FAIL
+
+======================================================================
+FAIL: test_invalid_business_payload_leaves_database_unchanged (test_business.BusinessTests.test_invalid_business_payload_leaves_database_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 57, in test_invalid_business_payload_leaves_database_unchanged
+    self.assertEqual(result['error']['code'],'INVALID_REQUEST')
+AssertionError: 'UNKNOWN_OPERATION' != 'INVALID_REQUEST'
+- UNKNOWN_OPERATION
++ INVALID_REQUEST
+
+
+======================================================================
+FAIL: test_load_replay_and_reject_second_load (test_business.BusinessTests.test_load_replay_and_reject_second_load)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 61, in test_load_replay_and_reject_second_load
+    self.ready()
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 32, in ready
+    self.assertEqual(upgrade['status'], 'succeeded', upgrade)
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'upgrade', 'operation': None, 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Operation is not registered.', 'field': 'operation', 'retryable': False}}
+
+======================================================================
+FAIL: test_risk_precedence_and_conflicts_in_both_views (test_business.BusinessTests.test_risk_precedence_and_conflicts_in_both_views)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 81, in test_risk_precedence_and_conflicts_in_both_views
+    self.ready()
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 32, in ready
+    self.assertEqual(upgrade['status'], 'succeeded', upgrade)
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'upgrade', 'operation': None, 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Operation is not registered.', 'field': 'operation', 'retryable': False}}
+
+======================================================================
+FAIL: test_slot_query_and_hard_time_task_identity (test_business.BusinessTests.test_slot_query_and_hard_time_task_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 90, in test_slot_query_and_hard_time_task_identity
+    self.ready('C_18'); self.task()
+    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 32, in ready
+    self.assertEqual(upgrade['status'], 'succeeded', upgrade)
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'upgrade', 'operation': None, 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Operation is not registered.', 'field': 'operation', 'retryable': False}}
+
+======================================================================
+FAIL: test_supplement_recheck_and_unresolvable_missing (test_business.BusinessTests.test_supplement_recheck_and_unresolvable_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 69, in test_supplement_recheck_and_unresolvable_missing
+    self.ready()
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 32, in ready
+    self.assertEqual(upgrade['status'], 'succeeded', upgrade)
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'upgrade', 'operation': None, 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Operation is not registered.', 'field': 'operation', 'retryable': False}}
+
+======================================================================
+FAIL: test_upgrade_retains_clock_and_original_replay (test_business.BusinessTests.test_upgrade_retains_clock_and_original_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 48, in test_upgrade_retains_clock_and_original_replay
+    self.ready()
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_business.py", line 32, in ready
+    self.assertEqual(upgrade['status'], 'succeeded', upgrade)
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+ : {'schema_version': 1, 'request_id': 'upgrade', 'operation': None, 'status': 'failed', 'data': None, 'error': {'code': 'UNKNOWN_OPERATION', 'message': 'Operation is not registered.', 'field': 'operation', 'retryable': False}}
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.138s
+
+FAILED (failures=6)

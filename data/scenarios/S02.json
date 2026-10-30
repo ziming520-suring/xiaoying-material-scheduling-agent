@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S02",
+  "title": "缺失信息可补查",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A02"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S02",
+    "items": [
+      {
+        "material_id": "M02",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "completed",
+    "items": [
+      {
+        "material_id": "M02",
+        "review_status": "passed",
+        "item_status": "completed",
+        "save_status": "saved",
+        "draft_status": "confirmed",
+        "draft_count": 1,
+        "occupies_slot": true,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S18"
+        ]
+      }
+    ],
+    "assertions": [
+      "primary 授权 unknown；SUP.M02 提供 authorized。",
+      "complete 后重新检查，最终保存依据包含补充来源。",
+      "应观察到补查或明确使用完整资料；不得凭空补授权。"
+    ]
+  }
+}

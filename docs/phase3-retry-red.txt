@@ -1,0 +1,32 @@
+test_batch_failure_keeps_completed_items (test_agent.AgentTests.test_batch_failure_keeps_completed_items) ... ok
+test_missing_material_and_step_limit_cannot_claim_success (test_agent.AgentTests.test_missing_material_and_step_limit_cannot_claim_success) ... ok
+test_mock_normal_and_conflict_are_observation_dependent (test_agent.AgentTests.test_mock_normal_and_conflict_are_observation_dependent) ... ok
+test_model_cannot_confirm_or_save_another_task (test_agent.AgentTests.test_model_cannot_confirm_or_save_another_task) ... ok
+test_read_failure_does_not_turn_into_passed_review (test_agent.AgentTests.test_read_failure_does_not_turn_into_passed_review) ... ok
+test_supplement_observation_causes_second_read_and_rule_check (test_agent.AgentTests.test_supplement_observation_causes_second_read_and_rule_check) ... ok
+test_trace_cannot_overwrite_previous_evidence (test_agent.AgentTests.test_trace_cannot_overwrite_previous_evidence) ... ok
+test_transient_retry_reuses_exact_request (test_agent.AgentTests.test_transient_retry_reuses_exact_request) ... FAIL
+test_unknown_stops_and_preserves_original_request (test_agent.AgentTests.test_unknown_stops_and_preserves_original_request) ... ok
+
+======================================================================
+FAIL: test_transient_retry_reuses_exact_request (test_agent.AgentTests.test_transient_retry_reuses_exact_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\余淼\Desktop\小影科技\project1\tests\test_agent.py", line 51, in test_transient_retry_reuses_exact_request
+    self.assertEqual(seen[0],seen[1])
+AssertionError: {'ope[322 chars]: 'save.6cd8260f3e104892948d3657690a5ac8', 'schema_version': 1} != {'ope[322 chars]: 'save.ad3b757d25264f1c8fd4aeacc20f94b8', 'schema_version': 1}
+  {'operation': 'draft.save',
+   'payload': {'check_ref': 'check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62',
+               'expected_draft_version': None,
+               'material_id': 'M01',
+               'material_ref': 'mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07',
+               'suggested_slot_id': 'S18',
+               'task_id': 'T1'},
+-  'request_id': 'save.6cd8260f3e104892948d3657690a5ac8',
++  'request_id': 'save.ad3b757d25264f1c8fd4aeacc20f94b8',
+   'schema_version': 1}
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.371s
+
+FAILED (failures=1)

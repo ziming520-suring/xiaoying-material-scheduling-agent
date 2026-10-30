@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "Failure is explicit and initial item has no saved draft",
+      "passed": true
+    },
+    {
+      "check": "Harness repeats exact original request and receives identical success",
+      "passed": true
+    },
+    {
+      "check": "Exactly one draft equals acknowledged recovery result",
+      "passed": true
+    },
+    {
+      "check": "Original requirement is preserved",
+      "passed": true
+    },
+    {
+      "check": "Recovered proposal occupies only if original time and no unaccepted risk",
+      "passed": true
+    }
+  ],
+  "notice": "Offline follow-up validation of preserved actual records, not a new model run or rewritten original verdict.",
+  "source_sha256": "794b267d201a36642f3fe74f5b455f215be47debee5d66141c7afcb5fef79fd3"
+}

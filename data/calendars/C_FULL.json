@@ -1,0 +1,22 @@
+{
+  "calendar_id": "C_FULL",
+  "revision": 1,
+  "existing": [
+    {
+      "schedule_id": "EX.S18",
+      "slot_id": "S18"
+    },
+    {
+      "schedule_id": "EX.S19",
+      "slot_id": "S19"
+    },
+    {
+      "schedule_id": "EX.S20",
+      "slot_id": "S20"
+    },
+    {
+      "schedule_id": "EX.S21",
+      "slot_id": "S21"
+    }
+  ]
+}

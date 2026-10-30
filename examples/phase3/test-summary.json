@@ -1,0 +1,22 @@
+{
+  "tests": 83,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 14.202,
+  "client_date": "2026-10-29",
+  "real_model_executed": false,
+  "source_sha256": {
+    "src/schedule_agent/__init__.py": "2a9af73f7f89d271acad72a7ea8b47fa3415526bcf9df97e630a69a449b0ef83",
+    "src/schedule_agent/__main__.py": "bbbf8d3588cf4521449b0b86927f1112735a624e6af28def8e31ee4f3c448cd6",
+    "src/schedule_agent/agent.py": "c18d164291242e53da15281b2ce124f86e31dacb50abb04b791af87ccac64d58",
+    "src/schedule_agent/business.py": "65a2c94550dc628a13540e16670cf9d17c3a6fdf93d792e16f86195c58cf8244",
+    "src/schedule_agent/business_schema.py": "d3b2beb3dd63448eba1e657a6d7e64990187976e55ffc5c13c6371a572ed52d0",
+    "src/schedule_agent/business_validation.py": "91a8774dbc81270d2fa1371cc13f6f5dfd2d44bd3b04620eb54bed6c9ec41bd9",
+    "src/schedule_agent/contracts.py": "b31a2c9bd58b8890899c83d620f440f9e9a6c9991952bc506adea590f67664c6",
+    "src/schedule_agent/draft_tools.py": "f7c4bae5b5751a81d7cd27196644952798cdbe13b67edb27b0fd8fcf6f36f660",
+    "src/schedule_agent/material_tools.py": "c13dc69ccf90ca542a22183c5031335a33a48353debd1d3ff5bbbaf8cf2a06eb",
+    "src/schedule_agent/model.py": "8d46b265fd0fb8f4037655778a7c781d9b17fdb80ff2db70767e861221218343",
+    "src/schedule_agent/runtime.py": "3006bccb00fd6a2472d2624cdf6bb0f7c58d9c5e2853ed3ef8e9fc95385b1417",
+    "src/schedule_agent/storage.py": "45577a0aa078cb5c69de2e1d098a725bcfca9057901bf8115fb5b6c6536eb953"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S05",
+  "title": "提示风险与明确确认",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A03"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S05",
+    "items": [
+      {
+        "material_id": "M05",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    },
+    {
+      "action": "user_confirm",
+      "details": {
+        "material_id": "M05",
+        "accepted_slot_id": "current_suggested_slot",
+        "accepted_risk_ids": [
+          "R004"
+        ],
+        "version": "current_pending"
+      }
+    },
+    {
+      "action": "read_state",
+      "details": {}
+    }
+  ],
+  "expected": {
+    "task_status": "completed",
+    "items": [
+      {
+        "material_id": "M05",
+        "review_status": "needs_confirmation",
+        "item_status": "completed",
+        "save_status": "saved",
+        "draft_status": "confirmed",
+        "draft_count": 1,
+        "occupies_slot": true,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S18",
+          "S19",
+          "S20",
+          "S21"
+        ]
+      }
+    ],
+    "assertions": [
+      "确认前仅一份待确认稿，不占位、任务不完成；从实际返回绑定当前版本 v。",
+      "独立确认后同稿版本为 v+1，依据 user_confirmation，占接受的时段；原稿曾有合法调整时不要求 v=1。",
+      "风险与原要求仍保留；不代表发布。"
+    ]
+  }
+}

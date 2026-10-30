@@ -1,0 +1,71 @@
+{
+  "mode": "real CLI / local SQLite",
+  "steps": [
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "missing"
+      },
+      "output": {
+        "data": null,
+        "error": {
+          "code": "INVALID_REQUEST",
+          "field": null,
+          "message": "Request has missing or unknown fields.",
+          "retryable": false
+        },
+        "operation": null,
+        "request_id": "missing",
+        "schema_version": 1,
+        "status": "failed"
+      },
+      "exit_code": 2,
+      "trace": [
+        {
+          "code": "INVALID_REQUEST",
+          "event": "validation_failed",
+          "operation": null,
+          "request_id": null
+        }
+      ]
+    },
+    {
+      "input": {
+        "schema_version": 1,
+        "request_id": "advance-1",
+        "operation": "clock.advance",
+        "payload": {
+          "target_time": "2026-10-28T10:00:00Z"
+        }
+      },
+      "output": {
+        "data": null,
+        "error": {
+          "code": "NOT_INITIALIZED",
+          "field": null,
+          "message": "Initialize the database explicitly before use.",
+          "retryable": false
+        },
+        "operation": "clock.advance",
+        "request_id": "advance-1",
+        "schema_version": 1,
+        "status": "failed"
+      },
+      "exit_code": 2,
+      "trace": [
+        {
+          "event": "validated",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        },
+        {
+          "code": "NOT_INITIALIZED",
+          "event": "rejected_or_rolled_back",
+          "operation": "clock.advance",
+          "request_id": "advance-1"
+        }
+      ]
+    }
+  ],
+  "database_created": false
+}

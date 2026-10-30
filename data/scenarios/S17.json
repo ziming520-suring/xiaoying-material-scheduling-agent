@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S17",
+  "title": "提交后结果不确定",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A06",
+    "A05"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S17",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "inject_fault",
+      "details": {
+        "point": "after_commit_and_recovery_read",
+        "effect": "unknown"
+      }
+    },
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    },
+    {
+      "action": "clear_fault",
+      "details": {}
+    },
+    {
+      "action": "repeat_saved_request",
+      "details": {
+        "instruction": "保持原键原参核对已经提交的结果。"
+      }
+    },
+    {
+      "action": "read_state",
+      "details": {}
+    }
+  ],
+  "expected": {
+    "task_status": "completed",
+    "items": [
+      {
+        "material_id": "M01",
+        "review_status": "passed",
+        "item_status": "completed",
+        "save_status": "saved",
+        "draft_status": "confirmed",
+        "draft_count": 1,
+        "occupies_slot": true,
+        "reason_codes": [],
+        "allowed_suggested_slot_ids": [
+          "S18"
+        ]
+      }
+    ],
+    "assertions": [
+      "中间必须返回 OUTCOME_UNKNOWN/save_status=unknown，不虚报确定失败或成功。",
+      "故障开启后停止该项新写尝试，保留请求；恢复后查回一份草稿，版本不重复增加。"
+    ]
+  }
+}

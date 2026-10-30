@@ -1,0 +1,849 @@
+{
+  "scenario_id": "S17",
+  "execution_status": "completed",
+  "model_mode": "offline_mock",
+  "evidence_kind": "actual_local_tools_with_offline_mock",
+  "real_model_executed": false,
+  "input": {
+    "task_id": "TASK.S17",
+    "items": [
+      {
+        "material_id": "M01",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "calendar_id": "C_EMPTY",
+  "fault_injection": "After real SQLite commit, inject response loss and failed recovery read.",
+  "agent_runs": [
+    {
+      "task_id": "TASK.S17",
+      "task_status": "incomplete",
+      "items": [
+        {
+          "material_id": "M01",
+          "requested_time": "2026-10-28T10:00:00Z",
+          "review_status": "passed",
+          "findings": [],
+          "suggested_slot": {
+            "slot_id": "S18",
+            "starts_at": "2026-10-28T10:00:00Z"
+          },
+          "pending_items": [],
+          "draft": {
+            "authorization_basis": "original_request",
+            "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+            "confirmation_required": false,
+            "draft_id": "draft.29fe4513c0f94cb4b3aa36dff27b43f9",
+            "findings": [],
+            "material_id": "M01",
+            "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+            "occupies_slot": true,
+            "requested_time": "2026-10-28T10:00:00Z",
+            "required_risk_ids": [],
+            "review_basis": {
+              "check_result": {
+                "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+                "findings": [],
+                "material_id": "M01",
+                "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+                "missing_fields": [],
+                "required_risk_ids": [],
+                "review_status": "passed",
+                "rule_versions": [
+                  {
+                    "rule_id": "R001",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R002",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R003",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R004",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R005",
+                    "version": 1
+                  }
+                ]
+              },
+              "checked_at": "2026-10-28T09:00:00Z",
+              "primary": {
+                "caption": "测试素材：演示字幕编辑功能。",
+                "manual_review_required": false,
+                "material_id": "M01",
+                "rights_status": "authorized",
+                "source_id": "BASE.M01",
+                "title": "合成字幕演示",
+                "version": 1
+              },
+              "read_result": {
+                "conflicts": [],
+                "effective": {
+                  "caption": "测试素材：演示字幕编辑功能。",
+                  "manual_review_required": false,
+                  "rights_status": "authorized",
+                  "title": "合成字幕演示"
+                },
+                "material_id": "M01",
+                "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+                "missing_fields": [],
+                "provenance": {
+                  "caption": [
+                    "BASE.M01"
+                  ],
+                  "manual_review_required": [
+                    "BASE.M01"
+                  ],
+                  "rights_status": [
+                    "BASE.M01"
+                  ],
+                  "title": [
+                    "BASE.M01"
+                  ]
+                },
+                "sources": [
+                  {
+                    "source_id": "BASE.M01",
+                    "version": 1
+                  }
+                ],
+                "supplement_available": false,
+                "view": "primary"
+              },
+              "rules": [
+                {
+                  "fields": [
+                    "title",
+                    "caption",
+                    "rights_status"
+                  ],
+                  "kind": "required_fields",
+                  "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+                  "rule_id": "R001",
+                  "severity": "missing",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "denied_rights",
+                  "reason": "测试规则：明确未授权的素材禁止排期。",
+                  "rule_id": "R002",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "banned_terms",
+                  "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+                  "rule_id": "R003",
+                  "severity": "block",
+                  "terms": [
+                    "保证收益"
+                  ],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "manual_review",
+                  "reason": "测试规则：人工复核标记须由用户明确确认。",
+                  "rule_id": "R004",
+                  "severity": "confirm",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "source_conflict",
+                  "reason": "测试规则：资料来源矛盾时必须先核实。",
+                  "rule_id": "R005",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                }
+              ],
+              "supplements": []
+            },
+            "review_status": "passed",
+            "status": "confirmed",
+            "suggested_slot_id": "S18",
+            "suggested_time": "2026-10-28T10:00:00Z",
+            "task_id": "TASK.S17",
+            "version": 1
+          },
+          "save_status": "unknown",
+          "item_status": "unknown",
+          "reason_codes": [
+            "OUTCOME_UNKNOWN"
+          ]
+        }
+      ],
+      "stop_reason": "outcome_unknown"
+    }
+  ],
+  "explicit_operations": [
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "payload": {
+          "initial_time": "2026-10-28T09:00:00Z"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "init",
+        "operation": "system.initialize",
+        "status": "succeeded",
+        "data": {
+          "current_time": "2026-10-28T09:00:00Z",
+          "clock_version": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "upgrade",
+        "operation": "schema.upgrade",
+        "payload": {
+          "target_storage_version": 2
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "upgrade",
+        "operation": "schema.upgrade",
+        "status": "succeeded",
+        "data": {
+          "previous_storage_version": 1,
+          "storage_schema_version": 2
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "load",
+        "operation": "fixture.load",
+        "payload": {
+          "dataset_id": "synthetic-campus-v1",
+          "manifest_sha256": "3e784ba3354fa16336ce478b98765028a0b5bcf32c108b40057a9534d9b4b0d4",
+          "calendar_id": "C_EMPTY"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "load",
+        "operation": "fixture.load",
+        "status": "succeeded",
+        "data": {
+          "dataset_id": "synthetic-campus-v1",
+          "calendar_id": "C_EMPTY",
+          "calendar_revision": 1,
+          "occupancy_version": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "task",
+        "operation": "task.create",
+        "payload": {
+          "task_id": "TASK.S17",
+          "items": [
+            {
+              "material_id": "M01",
+              "requested_time": "2026-10-28T18:00:00+08:00"
+            }
+          ]
+        }
+      },
+      "channel": "run",
+      "response": {
+        "schema_version": 1,
+        "request_id": "task",
+        "operation": "task.create",
+        "status": "succeeded",
+        "data": {
+          "task": {
+            "items": [
+              {
+                "material_id": "M01",
+                "requested_time": "2026-10-28T10:00:00Z"
+              }
+            ],
+            "task_id": "TASK.S17"
+          }
+        },
+        "error": null
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "save.c265f087016c4684bae23e1a7fb5ec96",
+        "operation": "draft.save",
+        "payload": {
+          "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+          "expected_draft_version": null,
+          "material_id": "M01",
+          "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+          "suggested_slot_id": "S18",
+          "task_id": "TASK.S17"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "data": {
+          "draft": {
+            "authorization_basis": "original_request",
+            "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+            "confirmation_required": false,
+            "draft_id": "draft.29fe4513c0f94cb4b3aa36dff27b43f9",
+            "findings": [],
+            "material_id": "M01",
+            "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+            "occupies_slot": true,
+            "requested_time": "2026-10-28T10:00:00Z",
+            "required_risk_ids": [],
+            "review_basis": {
+              "check_result": {
+                "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+                "findings": [],
+                "material_id": "M01",
+                "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+                "missing_fields": [],
+                "required_risk_ids": [],
+                "review_status": "passed",
+                "rule_versions": [
+                  {
+                    "rule_id": "R001",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R002",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R003",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R004",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R005",
+                    "version": 1
+                  }
+                ]
+              },
+              "checked_at": "2026-10-28T09:00:00Z",
+              "primary": {
+                "caption": "测试素材：演示字幕编辑功能。",
+                "manual_review_required": false,
+                "material_id": "M01",
+                "rights_status": "authorized",
+                "source_id": "BASE.M01",
+                "title": "合成字幕演示",
+                "version": 1
+              },
+              "read_result": {
+                "conflicts": [],
+                "effective": {
+                  "caption": "测试素材：演示字幕编辑功能。",
+                  "manual_review_required": false,
+                  "rights_status": "authorized",
+                  "title": "合成字幕演示"
+                },
+                "material_id": "M01",
+                "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+                "missing_fields": [],
+                "provenance": {
+                  "caption": [
+                    "BASE.M01"
+                  ],
+                  "manual_review_required": [
+                    "BASE.M01"
+                  ],
+                  "rights_status": [
+                    "BASE.M01"
+                  ],
+                  "title": [
+                    "BASE.M01"
+                  ]
+                },
+                "sources": [
+                  {
+                    "source_id": "BASE.M01",
+                    "version": 1
+                  }
+                ],
+                "supplement_available": false,
+                "view": "primary"
+              },
+              "rules": [
+                {
+                  "fields": [
+                    "title",
+                    "caption",
+                    "rights_status"
+                  ],
+                  "kind": "required_fields",
+                  "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+                  "rule_id": "R001",
+                  "severity": "missing",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "denied_rights",
+                  "reason": "测试规则：明确未授权的素材禁止排期。",
+                  "rule_id": "R002",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "banned_terms",
+                  "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+                  "rule_id": "R003",
+                  "severity": "block",
+                  "terms": [
+                    "保证收益"
+                  ],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "manual_review",
+                  "reason": "测试规则：人工复核标记须由用户明确确认。",
+                  "rule_id": "R004",
+                  "severity": "confirm",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "source_conflict",
+                  "reason": "测试规则：资料来源矛盾时必须先核实。",
+                  "rule_id": "R005",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                }
+              ],
+              "supplements": []
+            },
+            "review_status": "passed",
+            "status": "confirmed",
+            "suggested_slot_id": "S18",
+            "suggested_time": "2026-10-28T10:00:00Z",
+            "task_id": "TASK.S17",
+            "version": 1
+          },
+          "save_status": "saved"
+        },
+        "error": null,
+        "operation": "draft.save",
+        "request_id": "save.c265f087016c4684bae23e1a7fb5ec96",
+        "schema_version": 1,
+        "status": "succeeded"
+      }
+    },
+    {
+      "request": {
+        "schema_version": 1,
+        "request_id": "save.c265f087016c4684bae23e1a7fb5ec96",
+        "operation": "draft.save",
+        "payload": {
+          "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+          "expected_draft_version": null,
+          "material_id": "M01",
+          "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+          "suggested_slot_id": "S18",
+          "task_id": "TASK.S17"
+        }
+      },
+      "channel": "run",
+      "response": {
+        "data": {
+          "draft": {
+            "authorization_basis": "original_request",
+            "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+            "confirmation_required": false,
+            "draft_id": "draft.29fe4513c0f94cb4b3aa36dff27b43f9",
+            "findings": [],
+            "material_id": "M01",
+            "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+            "occupies_slot": true,
+            "requested_time": "2026-10-28T10:00:00Z",
+            "required_risk_ids": [],
+            "review_basis": {
+              "check_result": {
+                "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+                "findings": [],
+                "material_id": "M01",
+                "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+                "missing_fields": [],
+                "required_risk_ids": [],
+                "review_status": "passed",
+                "rule_versions": [
+                  {
+                    "rule_id": "R001",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R002",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R003",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R004",
+                    "version": 1
+                  },
+                  {
+                    "rule_id": "R005",
+                    "version": 1
+                  }
+                ]
+              },
+              "checked_at": "2026-10-28T09:00:00Z",
+              "primary": {
+                "caption": "测试素材：演示字幕编辑功能。",
+                "manual_review_required": false,
+                "material_id": "M01",
+                "rights_status": "authorized",
+                "source_id": "BASE.M01",
+                "title": "合成字幕演示",
+                "version": 1
+              },
+              "read_result": {
+                "conflicts": [],
+                "effective": {
+                  "caption": "测试素材：演示字幕编辑功能。",
+                  "manual_review_required": false,
+                  "rights_status": "authorized",
+                  "title": "合成字幕演示"
+                },
+                "material_id": "M01",
+                "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+                "missing_fields": [],
+                "provenance": {
+                  "caption": [
+                    "BASE.M01"
+                  ],
+                  "manual_review_required": [
+                    "BASE.M01"
+                  ],
+                  "rights_status": [
+                    "BASE.M01"
+                  ],
+                  "title": [
+                    "BASE.M01"
+                  ]
+                },
+                "sources": [
+                  {
+                    "source_id": "BASE.M01",
+                    "version": 1
+                  }
+                ],
+                "supplement_available": false,
+                "view": "primary"
+              },
+              "rules": [
+                {
+                  "fields": [
+                    "title",
+                    "caption",
+                    "rights_status"
+                  ],
+                  "kind": "required_fields",
+                  "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+                  "rule_id": "R001",
+                  "severity": "missing",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "denied_rights",
+                  "reason": "测试规则：明确未授权的素材禁止排期。",
+                  "rule_id": "R002",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "banned_terms",
+                  "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+                  "rule_id": "R003",
+                  "severity": "block",
+                  "terms": [
+                    "保证收益"
+                  ],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "manual_review",
+                  "reason": "测试规则：人工复核标记须由用户明确确认。",
+                  "rule_id": "R004",
+                  "severity": "confirm",
+                  "terms": [],
+                  "version": 1
+                },
+                {
+                  "fields": [],
+                  "kind": "source_conflict",
+                  "reason": "测试规则：资料来源矛盾时必须先核实。",
+                  "rule_id": "R005",
+                  "severity": "block",
+                  "terms": [],
+                  "version": 1
+                }
+              ],
+              "supplements": []
+            },
+            "review_status": "passed",
+            "status": "confirmed",
+            "suggested_slot_id": "S18",
+            "suggested_time": "2026-10-28T10:00:00Z",
+            "task_id": "TASK.S17",
+            "version": 1
+          },
+          "save_status": "saved"
+        },
+        "error": null,
+        "operation": "draft.save",
+        "request_id": "save.c265f087016c4684bae23e1a7fb5ec96",
+        "schema_version": 1,
+        "status": "succeeded"
+      }
+    }
+  ],
+  "final_drafts": [
+    {
+      "authorization_basis": "original_request",
+      "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+      "confirmation_required": false,
+      "draft_id": "draft.29fe4513c0f94cb4b3aa36dff27b43f9",
+      "findings": [],
+      "material_id": "M01",
+      "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+      "occupies_slot": true,
+      "requested_time": "2026-10-28T10:00:00Z",
+      "required_risk_ids": [],
+      "review_basis": {
+        "check_result": {
+          "check_ref": "check.6fb6c9485451e2724d0bbf6e5c75783d11e0335f3462e95b023f7c030b724b62",
+          "findings": [],
+          "material_id": "M01",
+          "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+          "missing_fields": [],
+          "required_risk_ids": [],
+          "review_status": "passed",
+          "rule_versions": [
+            {
+              "rule_id": "R001",
+              "version": 1
+            },
+            {
+              "rule_id": "R002",
+              "version": 1
+            },
+            {
+              "rule_id": "R003",
+              "version": 1
+            },
+            {
+              "rule_id": "R004",
+              "version": 1
+            },
+            {
+              "rule_id": "R005",
+              "version": 1
+            }
+          ]
+        },
+        "checked_at": "2026-10-28T09:00:00Z",
+        "primary": {
+          "caption": "测试素材：演示字幕编辑功能。",
+          "manual_review_required": false,
+          "material_id": "M01",
+          "rights_status": "authorized",
+          "source_id": "BASE.M01",
+          "title": "合成字幕演示",
+          "version": 1
+        },
+        "read_result": {
+          "conflicts": [],
+          "effective": {
+            "caption": "测试素材：演示字幕编辑功能。",
+            "manual_review_required": false,
+            "rights_status": "authorized",
+            "title": "合成字幕演示"
+          },
+          "material_id": "M01",
+          "material_ref": "mat.71decad8a4d63749fbc105ec3d9c305a6a3d4dc57db045b92a5e191236e8ee07",
+          "missing_fields": [],
+          "provenance": {
+            "caption": [
+              "BASE.M01"
+            ],
+            "manual_review_required": [
+              "BASE.M01"
+            ],
+            "rights_status": [
+              "BASE.M01"
+            ],
+            "title": [
+              "BASE.M01"
+            ]
+          },
+          "sources": [
+            {
+              "source_id": "BASE.M01",
+              "version": 1
+            }
+          ],
+          "supplement_available": false,
+          "view": "primary"
+        },
+        "rules": [
+          {
+            "fields": [
+              "title",
+              "caption",
+              "rights_status"
+            ],
+            "kind": "required_fields",
+            "reason": "测试规则：标题、文案和明确授权信息必须齐备。",
+            "rule_id": "R001",
+            "severity": "missing",
+            "terms": [],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "denied_rights",
+            "reason": "测试规则：明确未授权的素材禁止排期。",
+            "rule_id": "R002",
+            "severity": "block",
+            "terms": [],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "banned_terms",
+            "reason": "测试品牌规则：文案不得包含测试禁用表述。",
+            "rule_id": "R003",
+            "severity": "block",
+            "terms": [
+              "保证收益"
+            ],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "manual_review",
+            "reason": "测试规则：人工复核标记须由用户明确确认。",
+            "rule_id": "R004",
+            "severity": "confirm",
+            "terms": [],
+            "version": 1
+          },
+          {
+            "fields": [],
+            "kind": "source_conflict",
+            "reason": "测试规则：资料来源矛盾时必须先核实。",
+            "rule_id": "R005",
+            "severity": "block",
+            "terms": [],
+            "version": 1
+          }
+        ],
+        "supplements": []
+      },
+      "review_status": "passed",
+      "status": "confirmed",
+      "suggested_slot_id": "S18",
+      "suggested_time": "2026-10-28T10:00:00Z",
+      "task_id": "TASK.S17",
+      "version": 1
+    }
+  ],
+  "final_clock": {
+    "schema_version": 1,
+    "request_id": null,
+    "operation": "clock.read",
+    "status": "succeeded",
+    "data": {
+      "current_time": "2026-10-28T09:00:00Z",
+      "clock_version": 1
+    },
+    "error": null
+  },
+  "verified_assertions": [
+    "Original-key recovery/replay returns one draft; repeated response equal.",
+    "Final per-material draft count, status, allowed slot and occupancy match scenario projection."
+  ],
+  "trace_files": [
+    "S17-run-1.jsonl"
+  ],
+  "note": "Operations after agent_runs are separate real user/test calls; do not mistake an earlier run result for the final state.",
+  "phase4_verdict": {
+    "scenario_id": "S17",
+    "round": 2,
+    "passed": true,
+    "checks": {
+      "contract_assertions": true,
+      "initial_status_matches": true,
+      "no_model_errors": true
+    },
+    "real_model_executed": false,
+    "model_mode": "offline_mock",
+    "error_type": null,
+    "initial_statuses": [
+      "unknown"
+    ],
+    "model_errors": [],
+    "elapsed_seconds": 0.125,
+    "actual_file": "round-2/S17-actual.json",
+    "traces": [
+      {
+        "file": "S17-run-1.jsonl",
+        "actions": [
+          "read_material",
+          "check_rules",
+          "query_slots",
+          "save_draft"
+        ]
+      }
+    ]
+  }
+}

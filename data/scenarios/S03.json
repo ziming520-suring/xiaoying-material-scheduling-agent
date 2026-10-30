@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S03",
+  "title": "缺失信息不可补查",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A02"
+  ],
+  "calendar_id": "C_EMPTY",
+  "task": {
+    "task_id": "TASK.S03",
+    "items": [
+      {
+        "material_id": "M03",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M03",
+        "review_status": "needs_information",
+        "item_status": "needs_information",
+        "save_status": "not_attempted",
+        "draft_status": null,
+        "draft_count": 0,
+        "occupies_slot": false,
+        "reason_codes": [
+          "MATERIAL_INCOMPLETE"
+        ],
+        "allowed_suggested_slot_ids": []
+      }
+    ],
+    "assertions": [
+      "返回 caption、rights_status 缺口；请求补充。",
+      "没有草稿、占位或成功保存重放。"
+    ]
+  }
+}

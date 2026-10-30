@@ -1,0 +1,26 @@
+{
+  "validation_kind": "static_checker_negative_probes",
+  "cases": [
+    {
+      "case": "unknown_material",
+      "status": "rejected",
+      "reason": "task references unknown material"
+    },
+    {
+      "case": "duplicate_slot",
+      "status": "rejected",
+      "reason": "duplicate values: ['S18', 'S18']"
+    },
+    {
+      "case": "pending_marked_complete",
+      "status": "rejected",
+      "reason": "completion boundary"
+    },
+    {
+      "case": "fake_actual_result",
+      "status": "rejected",
+      "reason": "expected scenarios cannot claim execution"
+    }
+  ],
+  "business_execution_status": "not_run"
+}

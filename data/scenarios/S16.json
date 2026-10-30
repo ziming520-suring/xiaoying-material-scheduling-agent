@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "scenario_id": "S16",
+  "title": "绑定精确版本时段风险",
+  "execution_status": "not_run",
+  "requirement_ids": [
+    "A03",
+    "A04"
+  ],
+  "calendar_id": "C_18",
+  "task": {
+    "task_id": "TASK.S16",
+    "items": [
+      {
+        "material_id": "M05",
+        "requested_time": "2026-10-28T18:00:00+08:00"
+      }
+    ]
+  },
+  "steps": [
+    {
+      "action": "agent_run",
+      "details": {
+        "instruction": "让模型读取实际工具返回并选择后续动作；不预设其动作序列。"
+      }
+    },
+    {
+      "action": "user_confirm",
+      "details": {
+        "material_id": "M05",
+        "accepted_slot_id": "current_suggested_slot",
+        "accepted_risk_ids": [],
+        "version": "current_pending"
+      }
+    },
+    {
+      "action": "revise_pending",
+      "details": {
+        "instruction": "将建议更新到另一个实际可用同日候选；保存后版本加 1。"
+      }
+    },
+    {
+      "action": "user_confirm",
+      "details": {
+        "material_id": "M05",
+        "accepted_slot_id": "before_revision_suggested_slot",
+        "accepted_risk_ids": [
+          "R004"
+        ],
+        "version": "before_revision"
+      }
+    },
+    {
+      "action": "read_state",
+      "details": {}
+    }
+  ],
+  "expected": {
+    "task_status": "incomplete",
+    "items": [
+      {
+        "material_id": "M05",
+        "review_status": "needs_confirmation",
+        "item_status": "pending_confirmation",
+        "save_status": "failed",
+        "draft_status": "pending_confirmation",
+        "draft_count": 1,
+        "occupies_slot": false,
+        "reason_codes": [
+          "DRAFT_VERSION_CONFLICT"
+        ],
+        "allowed_suggested_slot_ids": [
+          "S19",
+          "S20",
+          "S21"
+        ]
+      }
+    ],
+    "assertions": [
+      "首次漏 R004 拒绝 CONFIRMATION_MISMATCH。",
+      "绑定改建议前的实际版本 v；一次有效改建议后版本=v+1；针对 v 的旧版确认拒绝 DRAFT_VERSION_CONFLICT，拒绝本身不增加版本，不能自动接受新建议。",
+      "S19→S20 为代表路径；实际使用两个不同可用候选，同一稿且不占位。"
+    ]
+  }
+}
