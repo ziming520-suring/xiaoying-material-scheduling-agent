@@ -28,3 +28,10 @@
 - 2026-10-30 用户已创建并提供目标仓库链接，插件核验 public、push=true、初始 size=0。浏览器建库失败不再阻塞；使用已连接 GitHub 插件上传。
 - Task 3/4 local checks complete：107 项测试再次通过（26.145 秒），运行时哈希与真实评估一致；扫描未发现疑似密钥或禁止提交文件。独立交付审查无 Critical/Important；唯一链接 Minor 已由主检查同步修正，所有文档入口链接已通过，详见 phase5-review.md。
 - 上传方式：通过 GitHub API 先初始化仓库，再上传已核验的完整文件树；远端最终提交和本地检查点可能 SHA 不同，最终以远端完整交付提交为准。必须核对两者 tree 相同后再同步本地主分支；保留本地初始提交作为检查点。
+
+## 完成核验（2026-10-30）
+
+- 535 份文件已上传；首个完整远端交付提交的 tree 为 fb290f6dc879f0ff4404d75480fb940e27b1272c，与本地已核验文件树完全一致。随后本次文档提交只补充完成记录，不改变运行时或证据。
+- 禁用 Git credential helper 后匿名 fetch 成功，证实公开可读取；远端 SUBMISSION.md 也按明确提交 SHA 成功读取。最终 SHA 以该仓库 main 检出后执行 git rev-parse HEAD 为准。
+- 本地初始提交保留在 local-delivery-checkpoint 分支；main 已跟踪 origin/main。原 var 中的预算与业务状态仍留本机，未上传或重置。
+- 第五阶段交付完成：题号 1，公开仓库 https://github.com/ziming520-suring/xiaoying-material-scheduling-agent 。真实模型 33/34 和 S08 限制继续披露；候选人实际工时与独立贡献仍须本人据实补录，不作为已完成的人工工作。
